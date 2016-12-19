@@ -1,0 +1,245 @@
+package com.gendeathrow.morechickens.modHelper;
+
+import java.util.List;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.oredict.OreDictionary;
+
+import com.gendeathrow.morechickens.core.ChickensMore;
+import com.setycz.chickens.ChickensRegistryItem;
+import com.setycz.chickens.SpawnType;
+
+public class BaseMetals 
+{
+
+
+	private static String skinLocation = "textures/entity/basemetals/";
+	
+	public static ChickensRegistryItem brassChicken = null;
+	public static ChickensRegistryItem cupronickelChicken = null; 
+	public static ChickensRegistryItem electrumChicken = null;
+	public static ChickensRegistryItem invarChicken = null;
+	public static ChickensRegistryItem bronzeChicken = null;
+	public static ChickensRegistryItem copperChicken = null;
+	public static ChickensRegistryItem leadChicken = null;
+	public static ChickensRegistryItem nickelChicken = null;
+	public static ChickensRegistryItem platinumChicken = null;
+	public static ChickensRegistryItem silverChicken = null;
+	public static ChickensRegistryItem tinChicken = null;
+	public static ChickensRegistryItem zincChicken = null;
+	public static ChickensRegistryItem steelChicken = null;
+	
+	
+	public static List<ChickensRegistryItem> tryRegisterChickens(List<ChickensRegistryItem> chickens)
+	{
+		
+          
+        ChickensMore.logger.info("Loading Base Metals Chickens...");
+       	chickens = registerChickens(chickens);
+		return chickens;
+	}
+	
+	//Terrasteel, Manasteel, elementium
+	public static List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> chickens)
+	{
+
+
+		
+		/*
+		 * 
+		 * 	basemetals:adamantine_ingot Ores:[ ore:ingotAdamantine]
+			basemetals:aquarium_ingot Ores:[ ore:ingotAquarium]
+			basemetals:brass_ingot Ores:[ ore:ingotBrass]
+			basemetals:coldiron_ingot Ores:[ ore:ingotColdiron]
+			basemetals:cupronickel_ingot Ores:[ ore:ingotCupronickel]
+					basemetals:electrum_ingot Ores:[ ore:ingotElectrum]
+					
+			basemetals:invar_ingot Ores:[ ore:ingotInvar]
+			basemetals:bronze_ingot Ores:[ ore:ingotBronze]
+			basemetals:copper_ingot Ores:[ ore:ingotCopper]
+			basemetals:lead_ingot Ores:[ ore:ingotLead]
+			basemetals:mithril_ingot Ores:[ ore:ingotMithril]
+			basemetals:nickel_ingot Ores:[ ore:ingotNickel]
+			basemetals:platinum_ingot Ores:[ ore:ingotPlatinum]
+			basemetals:silver_ingot Ores:[ ore:ingotSilver]
+			basemetals:starsteel_ingot Ores:[ ore:ingotStarsteel]
+			basemetals:steel_ingot Ores:[ ore:ingotSteel]
+			basemetals:tin_ingot Ores:[ ore:ingotTin]
+			basemetals:zinc_ingot Ores:[ ore:ingotZinc]
+		 */
+		List<ItemStack> brassIngot = OreDictionary.getOres("ingotBrass");
+		List<ItemStack> invarIngot = OreDictionary.getOres("ingotInvar");
+		List<ItemStack> cupronickelIngot =  OreDictionary.getOres("ingotCupronickel");
+		List<ItemStack> electrumIngot = OreDictionary.getOres("ingotElectrum");
+		List<ItemStack> bronzeIngot =  OreDictionary.getOres("ingotBronze");
+		List<ItemStack> copperIngot = OreDictionary.getOres("ingotCopper");
+		List<ItemStack> leadIngot = OreDictionary.getOres("ingotLead");
+		List<ItemStack> nickelIngot =  OreDictionary.getOres("ingotNickel");
+		List<ItemStack> platinumIngot = OreDictionary.getOres("ingotPlatinum");
+		List<ItemStack> silverIngot =  OreDictionary.getOres("ingotSilver");
+		List<ItemStack> steelIngot =  OreDictionary.getOres("ingotSteel");
+		List<ItemStack> tinIngot = OreDictionary.getOres("ingotTin");
+		List<ItemStack> zincIngot =  OreDictionary.getOres("ingotZinc");
+
+		
+		if(invarIngot.size() > 0)
+		{
+			invarChicken = new ChickensRegistryItem(
+                140, "invarchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "invar_chicken.png"),
+                invarIngot.get(0).copy(),
+                0x989585, 0xd1ccb6).setSpawnType(SpawnType.NONE);
+			chickens.add(invarChicken);
+		}
+		
+		if(bronzeIngot.size() > 0)
+		{
+			bronzeChicken = new ChickensRegistryItem(
+                141, "bronzechicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "bronze_chicken.png"),
+                bronzeIngot.get(0).copy(),
+                0x9a6731, 0xf6a44e).setSpawnType(SpawnType.NONE);
+			chickens.add(bronzeChicken);
+		}
+		
+		if(zincIngot.size() > 0)
+		{
+			zincChicken = new ChickensRegistryItem(
+                142, "zincchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "zinc_chicken.png"),
+                zincIngot.get(0).copy(),
+                0xb7b7b7, 0x868686).setSpawnType(SpawnType.NONE);
+			chickens.add(zincChicken);
+		}
+		
+		if(tinIngot.size() > 0)
+		{
+			tinChicken = new ChickensRegistryItem(
+                143, "tinchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "tin_chicken.png"),
+                tinIngot.get(0).copy(),
+                0xfff7ee, 0xbbb1a7).setSpawnType(SpawnType.NONE);
+			chickens.add(tinChicken);
+		}
+		
+		if(steelIngot.size() > 0)
+		{
+			steelChicken = new ChickensRegistryItem(
+                144, "steelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "steel_chicken.png"),
+                steelIngot.get(0).copy(),
+                0xd3e1e3, 0x8e9799).setSpawnType(SpawnType.NONE);
+			chickens.add(steelChicken);
+		}
+		
+		if(silverIngot.size() > 0)
+		{
+			silverChicken = new ChickensRegistryItem(
+                145, "silverchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "silver_chicken.png"),
+                silverIngot.get(0).copy(),
+                0xbebebe, 0xffffff).setSpawnType(SpawnType.NONE);
+			chickens.add(silverChicken);
+		}
+		
+		if(platinumIngot.size() > 0)
+		{
+			platinumChicken = new ChickensRegistryItem(
+                146, "platinumchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "platinum_chicken.png"),
+                platinumIngot.get(0).copy(),
+                0xffffff, 0x8d9a96).setSpawnType(SpawnType.NONE);
+			chickens.add(platinumChicken);
+		}
+		
+		if(nickelIngot.size() > 0)
+		{
+			nickelChicken = new ChickensRegistryItem(
+                147, "nickelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "nickel_chicken.png"),
+                nickelIngot.get(0).copy(),
+                0xefffec, 0xa2b69f).setSpawnType(SpawnType.NONE);
+			chickens.add(nickelChicken);
+		}
+		
+		if(leadIngot.size() > 0)
+		{
+			leadChicken = new ChickensRegistryItem(
+                148, "leadchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "lead_chicken.png"),
+                leadIngot.get(0).copy(),
+                0x777777, 0x383838).setSpawnType(SpawnType.NONE);
+			chickens.add(leadChicken);
+		}
+		
+		if(copperIngot.size() > 0)
+		{
+			copperChicken = new ChickensRegistryItem(
+                149, "copperchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "copper_chicken.png"),
+                copperIngot.get(0).copy(),
+                0xc06a48, 0xff9d76).setSpawnType(SpawnType.NONE);
+			chickens.add(copperChicken);
+		}
+		
+		if(brassIngot.size() > 0)
+		{
+			brassChicken = new ChickensRegistryItem(
+                150, "brasschicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "brass_chicken.png"),
+                brassIngot.get(0).copy(),
+                0xa99340, 0xffe377).setSpawnType(SpawnType.NONE);
+			chickens.add(brassChicken);
+		}
+		
+		if(cupronickelIngot.size() > 0)
+		{
+			cupronickelChicken = new ChickensRegistryItem(
+                151, "cupronickelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "cupronickel_chicken.png"),
+                cupronickelIngot.get(0).copy(),
+                0xd8ccb4, 0x98896c).setSpawnType(SpawnType.NONE);
+			chickens.add(cupronickelChicken);
+		}
+
+		if(electrumIngot.size() > 0)
+		{
+			electrumChicken = new ChickensRegistryItem(
+                152, "electrumchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "electrum_chicken.png"),
+                electrumIngot.get(0).copy(),
+                0xfff2b1, 0xd4be50).setSpawnType(SpawnType.NONE);
+			chickens.add(electrumChicken);
+		}
+
+        
+		if(brassChicken != null)
+			brassChicken.setParents(copperChicken, zincChicken);
+		
+		if(bronzeChicken != null)
+			bronzeChicken.setParents(copperChicken, tinChicken);
+		
+		if(invarChicken != null)
+			invarChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), nickelChicken);
+		
+		if(cupronickelChicken != null)
+			cupronickelChicken.setParents(copperChicken, nickelChicken);
+		
+		if(electrumChicken != null)
+			electrumChicken.setParents(silverChicken, ChickensMore.findChickenChickensMod("GoldChicken"));
+
+		if(steelChicken != null)
+			steelChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));
+		
+		if(copperChicken != null)
+			copperChicken.setParents(ChickensMore.findChickenChickensMod("YellowChicken"), ChickensMore.findChickenChickensMod("BrownChicken"));
+		
+		if(leadChicken != null)
+			leadChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));		
+		
+		if(tinChicken != null)
+			tinChicken.setParents(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));		
+
+		if(nickelChicken != null)
+			nickelChicken.setParents(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("GreenChicken"));	
+	
+		if(zincChicken != null)
+			zincChicken.setParents(ChickensMore.findChickenChickensMod("BlackChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));	
+		
+		if(silverChicken != null)
+			silverChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("WhiteChicken"));	
+	
+		if(platinumChicken != null)
+			platinumChicken.setParents(nickelChicken, silverChicken);	
+		
+		return chickens;
+	}
+}

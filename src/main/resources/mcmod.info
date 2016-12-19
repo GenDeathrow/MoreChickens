@@ -1,0 +1,16 @@
+[
+{
+  "modid": "morechickens",
+  "name": "More Chickens",
+  "description": "Adds Tinkers Construct and Draconic Evolution chickens for Chickens Mod",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["GenDeathrow"],
+  "credits": "Chickens Mod",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]

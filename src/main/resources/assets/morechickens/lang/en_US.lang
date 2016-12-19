@@ -1,0 +1,38 @@
+itemGroup.chickens=Chickens
+
+items.morechickens.solidxp=Solid Experience
+
+entity.arditeChicken.name=Ardite Chicken
+entity.colbaltChicken.name=Cobalt Chicken
+entity.manyullynChicken.name=Manyullyn Chicken
+entity.pigIronChicken.name=Pig Iron Chicken
+entity.knightSlimeChicken.name=Knight Slime Chicken
+
+entity.draconiumAwakenedChicken.name=Awakened Draconium Chicken
+entity.draconiumChicken.name=Draconium Chicken
+entity.blueSlime.name=Blue Slime Chicken
+entity.magmaSlime.name=Magma Slime Chicken
+entity.purpleSlime.name=Purple Slime Chicken
+entity.bloodSlime.name=Blood Chicken
+
+entity.pShardChicken.name=Prismarine Shard Chicken
+entity.xpChicken.name=Xp Chicken
+entity.pCrystalChicken.name=Prismarine Crystal Chicken
+
+entity.terrasteelchicken.name=Terrasteel Chicken
+entity.manasteelchicken.name=Manasteel Chicken
+entity.elementiumchicken.name=Elementium Chicken
+
+entity.invarchicken.name=Invar Chicken
+entity.bronzechicken.name=Bronze Chicken
+entity.zincchicken.name=Zinc Chicken
+entity.tinchicken.name=Tin Chicken
+entity.steelchicken.name=Steel Chicken
+entity.silverchicken.name=Silver Chicken
+entity.platinumchicken.name=Platinum Chicken
+entity.nickelchicken.name=Nickel Chicken
+entity.leadchicken.name=Lead Chicken
+entity.copperchicken.name=Copper Chicken
+entity.brasschicken.name=Brass Chicken
+entity.cupronickelchicken.name=Cupronickel Chicken
+entity.electrumchicken.name=Electrum Chicken

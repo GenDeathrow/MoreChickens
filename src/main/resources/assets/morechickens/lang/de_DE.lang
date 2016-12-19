@@ -1,0 +1,36 @@
+itemGroup.chickens=Chickens
+
+entity.arditeChicken.name=Ardithuhn
+entity.colbaltChicken.name=Kobalthuhn
+entity.manyullynChicken.name=Manyullynhuhn
+entity.pigIronChicken.name=Schweineeisenhuhn
+entity.knightSlimeChicken.name=Knightslimehuhn
+
+entity.draconiumAwakenedChicken.name=Erwachtes Drakonium-Huhn
+entity.draconiumChicken.name=Drakoniumhuhn
+entity.blueSlime.name=Blauschleimhuhn
+entity.magmaSlime.name=Magmaschleimhuhn
+entity.purpleSlime.name=Violettschleimhuhn
+entity.bloodSlime.name=Bluthuhn
+
+entity.pShardChicken.name=Prismarinscherbenhuhn
+entity.xpChicken.name=Erfahrungshuhn
+entity.pCrystalChicken.name=Prismarinkristallhuhn
+
+entity.terrasteelchicken.name=Terrastahlhuhn
+entity.manasteelchicken.name=Manastahlhuhn
+entity.elementiumchicken.name=Elementiumhuhn
+
+entity.invarchicken.name=Invar Chicken
+entity.bronzechicken.name=Bronze Chicken
+entity.zincchicken.name=Zinc Chicken
+entity.tinchicken.name=Tin Chicken
+entity.steelchicken.name=Steel Chicken
+entity.silverchicken.name=Silver Chicken
+entity.platinumchicken.name=Platinum Chicken
+entity.nickelchicken.name=Nickel Chicken
+entity.leadchicken.name=Lead Chicken
+entity.copperchicken.name=Copper Chicken
+entity.brasschicken.name=Brass Chicken
+entity.cupronickelchicken.name=Cupronickel Chicken
+entity.electrumchicken.name=Electrum Chicken
