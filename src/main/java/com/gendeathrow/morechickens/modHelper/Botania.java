@@ -37,7 +37,7 @@ public class Botania
 
 		
 		List<ItemStack> terrasteelIngot = OreDictionary.getOres("ingotTerrasteel");
-		List<ItemStack> manasteelIngot =  OreDictionary.getOres("ingotElvenElementium");
+		List<ItemStack> manasteelIngot =  OreDictionary.getOres("ingotManasteel");
 		List<ItemStack> elementiumNugget = OreDictionary.getOres("nuggetElvenElementium");
 		
 		if(terrasteelIngot.size() > 0)

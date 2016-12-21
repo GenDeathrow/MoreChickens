@@ -41,12 +41,12 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.0.0";
+	    public static final String VERSION = "1.0.7";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens;after:Botania;after:tconstruct;after:draconicevolution";
+	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -73,13 +73,12 @@ public class ChickensMore
 	    	proxy.preInit(event);
 	    	fileConfig = event.getSuggestedConfigurationFile();
 	    	
-	    	logger.info("More Chickens PostPreInit...");
 	    }
 		
 	    @EventHandler
 	    public void init(FMLInitializationEvent event) throws IOException
 	    {
-	    	logger.info("More Chickens PreInit...");
+	    	logger.info("More Chickens Init...");
 	    	
 	    	proxy.init(event);
 	    	
@@ -90,20 +89,19 @@ public class ChickensMore
 	    	proxy.registerEventHandlers();
 	    	proxy.initRenderers();
 	    	
-	    	logger.info("More Chickens Post->PreInit...");
 	     }
 	    
 	    
 	    
 	    private void loadConfiguration(File configFile) 
 	    {
-	    	logger.info("More Chickens Init...");
+	    	logger.info("More Chickens Loading Config...");
 	        Configuration configuration = new Configuration(configFile);
 
 	        Collection<ChickensRegistryItem> allChickens = generateDefaultChickens();
+	
 	        
-	        for (ChickensRegistryItem chicken : allChickens) 
-	        {
+	        for (ChickensRegistryItem chicken : allChickens) {
 	            boolean enabled = configuration.getBoolean("enabled", chicken.getEntityName(), true, "Is chicken enabled?");
 	            chicken.setEnabled(enabled);
 
@@ -118,13 +116,9 @@ public class ChickensMore
 
 	            ChickensRegistryItem parent1 = getChickenParent(configuration, "parent1", allChickens, chicken, chicken.getParent1());
 	            ChickensRegistryItem parent2 = getChickenParent(configuration, "parent2", allChickens, chicken, chicken.getParent2());
-	            
-	            if (parent1 != null && parent2 != null) 
-	            {
+	            if (parent1 != null && parent2 != null) {
 	                chicken.setParents(parent1, parent2);
-	            }
-	            else 
-	            {
+	            } else {
 	                chicken.setNoParents();
 	            }
 
@@ -138,7 +132,6 @@ public class ChickensMore
 
 	        configuration.save();
 	        
-	        logger.info("More Chickens Post->Init...");
 	    }
 	    
 	    
@@ -240,9 +233,8 @@ public class ChickensMore
 	    // Looks for a chicken inside Chickens mod
 	    public static ChickensRegistryItem findChickenChickensMod(String name) 
 	    {
-	    	for (ChickensRegistryItem chicken : ChickensRegistry.getAllItems()) 
+	    	for (ChickensRegistryItem chicken : ChickensRegistry.getItems()) 
 	    	{
-	    		System.out.println(chicken.getEntityName() +":"+ name);
 	    		if (chicken.getEntityName().compareToIgnoreCase(name) == 0) 
 	    		{
 	    			
