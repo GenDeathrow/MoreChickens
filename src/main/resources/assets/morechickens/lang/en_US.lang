@@ -36,3 +36,10 @@ entity.copperchicken.name=Copper Chicken
 entity.brasschicken.name=Brass Chicken
 entity.cupronickelchicken.name=Cupronickel Chicken
 entity.electrumchicken.name=Electrum Chicken
+
+entity.uraniumChicken.name=Uranium Chicken
+entity.aluminunChicken.name=Aluminium Chicken
+entity.constantanChicken.name=Constantan Chicken
+
+entity.osmiumChicken.name=Osmium Chicken
+

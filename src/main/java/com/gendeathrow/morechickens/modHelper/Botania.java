@@ -13,9 +13,10 @@ import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
 
 
-
 public class Botania 
 {
+	private static String skinLocation = "textures/entity/botania/";
+	
 	public static ChickensRegistryItem elementiumChicken = null;
 	public static ChickensRegistryItem manasteelChicken = null; 
 	public static ChickensRegistryItem terrasteelChicken = null;
@@ -43,7 +44,7 @@ public class Botania
 		if(terrasteelIngot.size() > 0)
 		{
 			 terrasteelChicken = new ChickensRegistryItem(
-                120, "terrasteelchicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/TerrasteelChicken.png"),
+                120, "terrasteelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "TerrasteelChicken.png"),
                 terrasteelIngot.get(0).copy(),
                 0x3ff123, 0xf5fcf1).setSpawnType(SpawnType.NONE);
 			chickens.add(terrasteelChicken);
@@ -52,7 +53,7 @@ public class Botania
 		if(terrasteelIngot.size() > 0)
 		{
 			 manasteelChicken = new ChickensRegistryItem(
-                121, "manasteelchicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/ManasteelChicken.png"),
+                121, "manasteelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "ManasteelChicken.png"),
                 manasteelIngot.get(0).copy(),
                 0x69d7ff, 0x002c4b).setSpawnType(SpawnType.NONE);
 			chickens.add(manasteelChicken);
@@ -61,7 +62,7 @@ public class Botania
 		if(terrasteelIngot.size() > 0)
 		{
 			elementiumChicken = new ChickensRegistryItem(
-                122, "elementiumchicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/ElementiumChicken.png"),
+                122, "elementiumchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "ElementiumChicken.png"),
                 elementiumNugget.get(0).copy(),
                 0xf655f3, 0xb407b7).setSpawnType(SpawnType.NONE);
 			chickens.add(elementiumChicken);

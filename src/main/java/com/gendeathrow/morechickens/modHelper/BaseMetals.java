@@ -13,7 +13,6 @@ import com.setycz.chickens.SpawnType;
 public class BaseMetals 
 {
 
-
 	private static String skinLocation = "textures/entity/basemetals/";
 	
 	public static ChickensRegistryItem brassChicken = null;
@@ -151,7 +150,7 @@ public class BaseMetals
 			nickelChicken = new ChickensRegistryItem(
                 147, "nickelchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "nickel_chicken.png"),
                 nickelIngot.get(0).copy(),
-                0xefffec, 0xa2b69f).setSpawnType(SpawnType.NONE);
+                0xefffec, 0xa2b69f).setSpawnType(SpawnType.NORMAL);
 			chickens.add(nickelChicken);
 		}
 		
@@ -169,7 +168,7 @@ public class BaseMetals
 			copperChicken = new ChickensRegistryItem(
                 149, "copperchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "copper_chicken.png"),
                 copperIngot.get(0).copy(),
-                0xc06a48, 0xff9d76).setSpawnType(SpawnType.NONE);
+                0xc06a48, 0xff9d76).setSpawnType(SpawnType.NORMAL);
 			chickens.add(copperChicken);
 		}
 		

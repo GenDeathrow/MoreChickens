@@ -4,11 +4,9 @@ package com.gendeathrow.morechickens.core;
 
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import java.util.Map;
 
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -31,6 +29,8 @@ import com.gendeathrow.morechickens.core.proxies.CommonProxy;
 import com.gendeathrow.morechickens.modHelper.BaseMetals;
 import com.gendeathrow.morechickens.modHelper.Botania;
 import com.gendeathrow.morechickens.modHelper.DraconicEvolution;
+import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
+import com.gendeathrow.morechickens.modHelper.Mekanism;
 import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
@@ -41,12 +41,12 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.0.7";
+	    public static final String VERSION = "1.0.8";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution";
+	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -135,15 +135,18 @@ public class ChickensMore
 	    }
 	    
 	    
-	    private ItemStack loadItemStack(Configuration configuration, ChickensRegistryItem chicken, String prefix, ItemStack defaultItemStack) {
+	    @SuppressWarnings("unused")
+		private ItemStack loadItemStack(Configuration configuration, ChickensRegistryItem chicken, String prefix, ItemStack defaultItemStack) {
 	        String itemName = configuration.getString(prefix + "ItemName", chicken.getEntityName(), defaultItemStack.getItem().getRegistryName().toString(), "Item name to be laid/dropped.");
 	        int itemAmount = configuration.getInt(prefix + "ItemAmount", chicken.getEntityName(), defaultItemStack.stackSize, 1, 64, "Item amount to be laid/dropped.");
 	        int itemMeta = configuration.getInt(prefix + "ItemMeta", chicken.getEntityName(), defaultItemStack.getMetadata(), Integer.MIN_VALUE, Integer.MAX_VALUE, "Item amount to be laid/dropped.");
 
 	        ResourceLocation itemResourceLocation = new ResourceLocation(itemName);
 	        Item item = Item.REGISTRY.getObject(itemResourceLocation);
-	        if (item == null) {
-	            throw new RuntimeException("Cannot find egg item with name: " + itemName);
+	        if (item == null) 
+	        {
+	        	if(defaultItemStack != null) return defaultItemStack;	
+	        	else throw new RuntimeException("Cannot find egg item with name: " + itemName);
 	        }
 	        return new ItemStack(item, itemAmount, itemMeta);
 	    }
@@ -198,6 +201,10 @@ public class ChickensMore
 	        chickens = Botania.tryRegisterChickens(chickens);
 	        
 	        chickens = BaseMetals.tryRegisterChickens(chickens);
+	        
+	        chickens = ImmersiveEngineering.tryRegisterChickens(chickens);
+	        
+	        chickens = Mekanism.tryRegisterChickens(chickens);
 	        
 	        //RF CHICKEN
 	 

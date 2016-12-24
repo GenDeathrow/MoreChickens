@@ -18,6 +18,8 @@ import com.setycz.chickens.SpawnType;
 public class TinkersConstruct 
 {
 	
+	private static String skinLocation = "textures/entity/tinkers/";
+	
 	public static ChickensRegistryItem arditeChicken = null;
 	public static ChickensRegistryItem colbaltChicken = null; 
 	public static ChickensRegistryItem manyullynChicken = null;
@@ -60,7 +62,7 @@ public class TinkersConstruct
 		if(arditeIngot != null)
 		{
 			arditeChicken = new ChickensRegistryItem(
-                80, "arditeChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/ArditeChicken.png"),
+                80, "arditeChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "ArditeChicken.png"),
                 arditeIngot,
                 0xdc3e00, 0xffb20b).setSpawnType(SpawnType.NONE);
         	chickens.add(arditeChicken);
@@ -69,7 +71,7 @@ public class TinkersConstruct
 		if(cobaltIngot != null)
 		{
 			colbaltChicken = new ChickensRegistryItem(
-                81, "colbaltChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/ColbaltChicken.png"),
+                81, "colbaltChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "ColbaltChicken.png"),
                 cobaltIngot,
                 0x0c5abe, 0x03d94f1).setSpawnType(SpawnType.NONE);
          	chickens.add(colbaltChicken);
@@ -78,7 +80,7 @@ public class TinkersConstruct
 		if(manyullynIngot != null)
 		{
 			manyullynChicken = new ChickensRegistryItem(
-                82, "manyullynChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/ManyullynChicken.png"),
+                82, "manyullynChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "ManyullynChicken.png"),
                 manyullynIngot,
                 0x652e87, 0xbc8fe7).setSpawnType(SpawnType.NONE);
 			chickens.add(manyullynChicken);
@@ -87,7 +89,7 @@ public class TinkersConstruct
 		if(pigIronIngot != null)
 		{
 			pigIronChicken = new ChickensRegistryItem(
-                83, "pigIronChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/PigIronChicken.png"),
+                83, "pigIronChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "PigIronChicken.png"),
                 pigIronIngot,
                 0xe6b8b8, 0xdba9a9).setSpawnType(SpawnType.NONE);
 			chickens.add(pigIronChicken);
@@ -96,7 +98,7 @@ public class TinkersConstruct
 		if(knightSlimeIngot != null)
 		{
 			knightSlimeChicken = new ChickensRegistryItem(
-                84, "knightSlimeChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/KnightSlimeChicken.png"),
+                84, "knightSlimeChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "KnightSlimeChicken.png"),
                 knightSlimeIngot,
                 0xc17ced, 0xad70d8).setSpawnType(SpawnType.NONE);
 			chickens.add(knightSlimeChicken);
@@ -105,7 +107,7 @@ public class TinkersConstruct
 		if(bloodSlime != null)
 		{
 			bloodSlimeChicken = new ChickensRegistryItem(
-                85, "bloodSlime", new ResourceLocation(ChickensMore.MODID, "textures/entity/BloodSlime.png"),
+                85, "bloodSlime", new ResourceLocation(ChickensMore.MODID, skinLocation + "BloodSlime.png"),
                 bloodSlime,
                 0xc50616, 0xee0316).setSpawnType(SpawnType.NONE);
 			chickens.add(bloodSlimeChicken);
@@ -114,7 +116,7 @@ public class TinkersConstruct
 		if(purpleSlime != null)
 		{
 			purpleSlimeChicken = new ChickensRegistryItem(
-                86, "purpleSlime", new ResourceLocation(ChickensMore.MODID, "textures/entity/PurpleSlime.png"),
+                86, "purpleSlime", new ResourceLocation(ChickensMore.MODID, skinLocation + "PurpleSlime.png"),
                 purpleSlime,
                 0xc9aad9, 0x7511bf).setSpawnType(SpawnType.NONE);
 			chickens.add(purpleSlimeChicken);
@@ -123,7 +125,7 @@ public class TinkersConstruct
 		if(magmaSlime != null)
 		{
 			magmaSlimeChicken = new ChickensRegistryItem(
-                87, "magmaSlime", new ResourceLocation(ChickensMore.MODID, "textures/entity/MagmaSlime.png"),
+                87, "magmaSlime", new ResourceLocation(ChickensMore.MODID, skinLocation + "MagmaSlime.png"),
                 magmaSlime,
                 0xecb55f, 0xaf7314).setSpawnType(SpawnType.NONE);
         	chickens.add(magmaSlimeChicken);
@@ -132,7 +134,7 @@ public class TinkersConstruct
 		if(blueSlime != null)
 		{
 			blueSlimeChicken = new ChickensRegistryItem(
-                88, "blueSlime", new ResourceLocation(ChickensMore.MODID, "textures/entity/BlueSlime.png"),
+                88, "blueSlime", new ResourceLocation(ChickensMore.MODID, skinLocation + "BlueSlime.png"),
                 blueSlime,
                 0x67b4c4, 0x30717f).setSpawnType(SpawnType.NONE);
 			chickens.add(blueSlimeChicken);

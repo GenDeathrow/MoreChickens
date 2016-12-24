@@ -1,10 +1,10 @@
 package com.gendeathrow.morechickens.core.proxies;
 
-import com.setycz.chickens.ChickensRegistryItem;
-
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
+
+import com.setycz.chickens.ChickensRegistryItem;
 
 public class CommonProxy
 {

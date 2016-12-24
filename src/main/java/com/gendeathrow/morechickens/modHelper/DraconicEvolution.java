@@ -15,6 +15,9 @@ import com.setycz.chickens.SpawnType;
 
 public class DraconicEvolution 
 {
+	
+	private static String skinLocation = "textures/entity/draconic/";
+
 	public static ChickensRegistryItem draconiumChicken = null;
 	public static ChickensRegistryItem draconiumAwakenedChicken = null; 
 	
@@ -39,7 +42,7 @@ public class DraconicEvolution
 		if(draconiumIngot != null)
 		{
         	draconiumChicken = new ChickensRegistryItem(
-                90, "draconiumChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/DraconiumChicken.png"),
+                90, "draconiumChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "DraconiumChicken.png"),
                 draconiumIngot,
                 0x301549, 0x1a0c27).setSpawnType(SpawnType.NONE);
         	chickens.add(draconiumChicken);
@@ -47,7 +50,7 @@ public class DraconicEvolution
 		if(awakendNuggut != null)
 		{
         	draconiumAwakenedChicken = new ChickensRegistryItem(
-                91, "draconiumAwakenedChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/DraconiumAwakenedChicken.png"),
+                91, "draconiumAwakenedChicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "DraconiumAwakenedChicken.png"),
                 awakendNuggut,
                 0xcc440c, 0x9c691a).setSpawnType(SpawnType.NONE);
         	chickens.add(draconiumAwakenedChicken);
@@ -56,14 +59,14 @@ public class DraconicEvolution
         if(Loader.isModLoaded("tconstruct"))
         {
         	if(draconiumChicken != null)
-        		draconiumChicken.setParents(ChickensMore.findChickenChickensMod("pigIronChicken"), ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumChicken.setParents(TinkersConstruct.pigIronChicken, ChickensMore.findChickenChickensMod("enderchicken"));
         	if(awakendNuggut != null)
         		draconiumAwakenedChicken.setParents(draconiumChicken,ChickensMore.findChickenChickensMod("enderchicken"));
         }
         else
         {
         	if(draconiumChicken != null)
-        		draconiumChicken.setParents(ChickensMore.findChickenChickensMod("gunpowderchicken"), ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumChicken.setParents(ChickensMore.findChickenChickensMod("GunpowderChicken"), ChickensMore.findChickenChickensMod("enderchicken"));
         	if(awakendNuggut != null)
         		draconiumAwakenedChicken.setParents(draconiumChicken, ChickensMore.findChickenChickensMod("enderchicken"));
         }
