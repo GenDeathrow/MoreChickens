@@ -34,3 +34,9 @@ entity.copperchicken.name=Kupferhuhn
 entity.brasschicken.name=Messinghuhn
 entity.cupronickelchicken.name=Kupfernickelhuhn
 entity.electrumchicken.name=Elektrumhuhn
+
+entity.yelloriumChicken.name=Yelloriumhuhn
+entity.cyaniteChicken = Cyanithuhn
+entity.blutoniumChicken = Blutoniumhuhn
+entity.ludicriteChicken = Ludicrithuhn
+entity.graphiteChicken = Graphithuhn
