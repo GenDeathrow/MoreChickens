@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
+import com.gendeathrow.morechickens.modHelper.*;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -26,12 +27,6 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 import com.gendeathrow.morechickens.core.proxies.CommonProxy;
-import com.gendeathrow.morechickens.modHelper.BaseMetals;
-import com.gendeathrow.morechickens.modHelper.Botania;
-import com.gendeathrow.morechickens.modHelper.DraconicEvolution;
-import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
-import com.gendeathrow.morechickens.modHelper.Mekanism;
-import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
@@ -46,7 +41,7 @@ public class ChickensMore
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism";
+	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -205,6 +200,8 @@ public class ChickensMore
 	        chickens = ImmersiveEngineering.tryRegisterChickens(chickens);
 	        
 	        chickens = Mekanism.tryRegisterChickens(chickens);
+
+	        chickens = ExtremeReactors.tryRegisterChickens(chickens);
 	        
 	        //RF CHICKEN
 	 

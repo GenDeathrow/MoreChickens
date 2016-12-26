@@ -43,3 +43,8 @@ entity.constantanChicken.name=Constantan Chicken
 
 entity.osmiumChicken.name=Osmium Chicken
 
+entity.yelloriumChicken.name=Yellorium Chicken
+entity.cyaniteChicken = Cyanite Chicken
+entity.blutoniumChicken = Blutonium Chicken
+entity.ludicriteChicken = Ludicrite Chicken
+entity.graphiteChicken = Graphite Chicken
