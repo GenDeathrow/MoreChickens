@@ -1,6 +1,5 @@
 package com.gendeathrow.morechickens.modHelper;
 
-import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
@@ -25,8 +24,8 @@ public class Botania
 	public static List<ChickensRegistryItem> tryRegisterChickens(List<ChickensRegistryItem> chickens)
 	{
 		
+        ChickensMore.logger.info("Looking for Botania addon...");
         if(!Loader.isModLoaded("Botania")) return chickens;
-        
         ChickensMore.logger.info("Loading Botania Chickens...");
        	chickens = registerChickens(chickens);
 		return chickens;
@@ -70,13 +69,13 @@ public class Botania
         
         
 		if(manasteelChicken != null)
-			manasteelChicken.setParents(ChickensMore.findChickenChickensMod("ironchicken"), ChickensMore.findChickenChickensMod("ghastchicken"));
+			manasteelChicken.setParentsNew(ChickensMore.findChickenChickensMod("ironchicken"), ChickensMore.findChickenChickensMod("ghastchicken"));
 		if(terrasteelChicken != null)
-			terrasteelChicken.setParents(ChickensMore.findChickenChickensMod("enderchicken"), ChickensMore.findChicken(chickens, "pCrystalChicken"));
+			terrasteelChicken.setParentsNew(ChickensMore.findChickenChickensMod("enderchicken"), ChickensMore.findChicken(chickens, "pCrystalChicken"));
 		if(elementiumChicken != null)
-			elementiumChicken.setParents(manasteelChicken, terrasteelChicken);
+			elementiumChicken.setParentsNew(manasteelChicken, terrasteelChicken);
         
-    	
+    	  
     	return chickens;
 	}
 	

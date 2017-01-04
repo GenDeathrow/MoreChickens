@@ -1,14 +1,15 @@
 package com.gendeathrow.morechickens.modHelper;
 
-import com.gendeathrow.morechickens.core.ChickensMore;
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
+import java.util.List;
+
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 
-import java.util.List;
+import com.gendeathrow.morechickens.core.ChickensMore;
+import com.setycz.chickens.ChickensRegistryItem;
+import com.setycz.chickens.SpawnType;
 
 public class ExtremeReactors
 {
@@ -32,10 +33,6 @@ public class ExtremeReactors
         if(!Loader.isModLoaded("bigreactors")) return chickens;
         ChickensMore.logger.info("Loading Extreme Reactors addon...");
 
-        for (String x: OreDictionary.getOreNames()) {
-            System.out.println(x);
-        }
-
         chickens = registerChickens(chickens);
 
         return chickens;
@@ -47,7 +44,7 @@ public class ExtremeReactors
         List<ItemStack> ingotCyanite =  OreDictionary.getOres("ingotCyanite");
         List<ItemStack> ingotGraphite =  OreDictionary.getOres("ingotGraphite");
         List<ItemStack> ingotBlutonium =  OreDictionary.getOres("ingotBlutonium");
-        List<ItemStack> ingotLudicrite =  OreDictionary.getOres("ingotLudicrite");
+        //List<ItemStack> ingotLudicrite =  OreDictionary.getOres("ingotLudicrite");
 
         if(ingotYellorium.size() > 0)
         {
@@ -61,9 +58,9 @@ public class ExtremeReactors
             ).setSpawnType(SpawnType.NONE);
             chickens.add(yelloriumChicken);
 
-            yelloriumChicken.setParents(
+            yelloriumChicken.setParentsNew(
                     ChickensMore.findChickenChickensMod("GlowstoneChicken"),
-                    ChickensMore.findChickenChickensMod("RedstoneChicken")
+                    ChickensMore.findChickenChickensMod("EnderChicken")
             );
         }
 
@@ -78,7 +75,7 @@ public class ExtremeReactors
             ).setSpawnType(SpawnType.NONE);
             chickens.add(graphiteChicken);
 
-            graphiteChicken.setParents(
+            graphiteChicken.setParentsNew(
                     ChickensMore.findChickenChickensMod("CoalChicken"),
                     ChickensMore.findChickenChickensMod("BlackChicken")
             );
@@ -95,7 +92,7 @@ public class ExtremeReactors
             ).setSpawnType(SpawnType.NONE);
             chickens.add(cyaniteChicken);
 
-            cyaniteChicken.setParents(
+            cyaniteChicken.setParentsNew(
                     yelloriumChicken,
                     ChickensMore.findChickenChickensMod("SandChicken")
             );
@@ -112,29 +109,34 @@ public class ExtremeReactors
             ).setSpawnType(SpawnType.NONE);
             chickens.add(blutoniumChicken);
 
-            blutoniumChicken.setParents(
+            blutoniumChicken.setParentsNew(
                     cyaniteChicken,
                     ChickensMore.findChickenChickensMod("WaterChicken")
             );
         }
 
         //Should add Nether Star Chicken and make it an ingredient
-        /*if (ingotLudicrite.size() > 0) {
-            ludicriteChicken = new ChickensRegistryItem(
-                    2104,
-                    "ludicriteChicken",
-                    new ResourceLocation(ChickensMore.MODID, skinLocation + "ludicrite_chicken.png"),
-                    ingotLudicrite.get(0).copy(),
-                    0xB600A2,
-                    0xC95BDB
-            ).setSpawnType(SpawnType.NONE);
-            chickens.add(ludicriteChicken);
-
-            ludicriteChicken.setParents(
-                    blutoniumChicken,
-                    cyaniteChicken //TODO: ChickensMore.findChicken("netherStarChicken")
-            );
-        }*/
+//        if (ingotLudicrite.size() > 0) {
+//            ludicriteChicken = new ChickensRegistryItem(
+//                    2104,
+//                    "ludicriteChicken",
+//                    new ResourceLocation(ChickensMore.MODID, skinLocation + "ludicrite_chicken.png"),
+//                    ingotLudicrite.get(0).copy(),
+//                    0xB600A2,
+//                    0xC95BDB
+//            ){ 
+//            	public int getTier() 
+//            	{
+//            		return 10;
+//				}   
+//              }.setSpawnType(SpawnType.NONE);
+//            chickens.add(ludicriteChicken);
+//
+//            ludicriteChicken.setParents(
+//                    blutoniumChicken,
+//                    cyaniteChicken //TODO: ChickensMore.findChicken("netherStarChicken")
+//            );
+//        }
 
         return chickens;
     }

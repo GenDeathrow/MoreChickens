@@ -24,7 +24,7 @@ public class BaseMetals
 	public static ChickensRegistryItem leadChicken = null;
 	public static ChickensRegistryItem nickelChicken = null;
 	public static ChickensRegistryItem platinumChicken = null;
-	public static ChickensRegistryItem silverChicken = null;
+	public static ChickensRegistryItem silverOreChicken = null;
 	public static ChickensRegistryItem tinChicken = null;
 	public static ChickensRegistryItem zincChicken = null;
 	public static ChickensRegistryItem steelChicken = null;
@@ -34,7 +34,7 @@ public class BaseMetals
 	{
 		
           
-        ChickensMore.logger.info("Loading Base Metals Chickens...");
+        ChickensMore.logger.info("Checking for Base Metals Chickens...");
        	chickens = registerChickens(chickens);
 		return chickens;
 	}
@@ -129,11 +129,11 @@ public class BaseMetals
 		
 		if(silverIngot.size() > 0)
 		{
-			silverChicken = new ChickensRegistryItem(
-                145, "silverchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "silver_chicken.png"),
+			silverOreChicken = new ChickensRegistryItem(
+                145, "silverorechicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "silver_chicken.png"),
                 silverIngot.get(0).copy(),
                 0xbebebe, 0xffffff).setSpawnType(SpawnType.NONE);
-			chickens.add(silverChicken);
+			chickens.add(silverOreChicken);
 		}
 		
 		if(platinumIngot.size() > 0)
@@ -201,43 +201,43 @@ public class BaseMetals
 
         
 		if(brassChicken != null)
-			brassChicken.setParents(copperChicken, zincChicken);
+			brassChicken.setParentsNew(copperChicken, zincChicken);
 		
 		if(bronzeChicken != null)
-			bronzeChicken.setParents(copperChicken, tinChicken);
+			bronzeChicken.setParentsNew(copperChicken, tinChicken);
 		
 		if(invarChicken != null)
-			invarChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), nickelChicken);
+			invarChicken.setParentsNew(ChickensMore.findChickenChickensMod("IronChicken"), nickelChicken);
 		
 		if(cupronickelChicken != null)
-			cupronickelChicken.setParents(copperChicken, nickelChicken);
+			cupronickelChicken.setParentsNew(copperChicken, nickelChicken);
 		
 		if(electrumChicken != null)
-			electrumChicken.setParents(silverChicken, ChickensMore.findChickenChickensMod("GoldChicken"));
+			electrumChicken.setParentsNew(silverOreChicken, ChickensMore.findChickenChickensMod("GoldChicken"));
 
 		if(steelChicken != null)
-			steelChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));
+			steelChicken.setParentsNew(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));
 		
 		if(copperChicken != null)
-			copperChicken.setParents(ChickensMore.findChickenChickensMod("YellowChicken"), ChickensMore.findChickenChickensMod("BrownChicken"));
+			copperChicken.setParentsNew(ChickensMore.findChickenChickensMod("YellowChicken"), ChickensMore.findChickenChickensMod("BrownChicken"));
 		
 		if(leadChicken != null)
-			leadChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));		
+			leadChicken.setParentsNew(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("CoalChicken"));		
 		
 		if(tinChicken != null)
-			tinChicken.setParents(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));		
+			tinChicken.setParentsNew(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));		
 
 		if(nickelChicken != null)
-			nickelChicken.setParents(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("GreenChicken"));	
+			nickelChicken.setParentsNew(ChickensMore.findChickenChickensMod("WhiteChicken"), ChickensMore.findChickenChickensMod("GreenChicken"));	
 	
 		if(zincChicken != null)
-			zincChicken.setParents(ChickensMore.findChickenChickensMod("BlackChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));	
+			zincChicken.setParentsNew(ChickensMore.findChickenChickensMod("BlackChicken"), ChickensMore.findChickenChickensMod("ClayChicken"));	
 		
-		if(silverChicken != null)
-			silverChicken.setParents(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("WhiteChicken"));	
+		if(silverOreChicken != null)
+			silverOreChicken.setParentsNew(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("WhiteChicken"));	
 	
 		if(platinumChicken != null)
-			platinumChicken.setParents(nickelChicken, silverChicken);	
+			platinumChicken.setParentsNew(nickelChicken, silverOreChicken);	
 		
 		return chickens;
 	}

@@ -1,6 +1,5 @@
 package com.gendeathrow.morechickens.modHelper;
 
-import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
@@ -23,9 +22,9 @@ public class DraconicEvolution
 	
 	public static List<ChickensRegistryItem> tryRegisterChickens(List<ChickensRegistryItem> chickens)
 	{
-		
+		ChickensMore.logger.info("Looking for Draconic Evolution addon...");
         if(!Loader.isModLoaded("draconicevolution")) return chickens;
-        ChickensMore.logger.info("Loading Draconic Evolution addon...");
+        ChickensMore.logger.info("Loading Draconic Evolution Chickens...");
 		
        	chickens = registerChickens(chickens);
 		
@@ -59,16 +58,16 @@ public class DraconicEvolution
         if(Loader.isModLoaded("tconstruct"))
         {
         	if(draconiumChicken != null)
-        		draconiumChicken.setParents(TinkersConstruct.pigIronChicken, ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumChicken.setParentsNew(TinkersConstruct.pigIronChicken, ChickensMore.findChickenChickensMod("enderchicken"));
         	if(awakendNuggut != null)
-        		draconiumAwakenedChicken.setParents(draconiumChicken,ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumAwakenedChicken.setParentsNew(draconiumChicken,ChickensMore.findChickenChickensMod("enderchicken"));
         }
         else
         {
         	if(draconiumChicken != null)
-        		draconiumChicken.setParents(ChickensMore.findChickenChickensMod("GunpowderChicken"), ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumChicken.setParentsNew(ChickensMore.findChickenChickensMod("GunpowderChicken"), ChickensMore.findChickenChickensMod("enderchicken"));
         	if(awakendNuggut != null)
-        		draconiumAwakenedChicken.setParents(draconiumChicken, ChickensMore.findChickenChickensMod("enderchicken"));
+        		draconiumAwakenedChicken.setParentsNew(draconiumChicken, ChickensMore.findChickenChickensMod("enderchicken"));
         }
         
 		return chickens;

@@ -5,7 +5,6 @@ import java.util.List;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.oredict.OreDictionary;
 
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.setycz.chickens.ChickensRegistryItem;
@@ -42,7 +41,7 @@ mekanism:Ingot:3 Ores:[ ore:ingotRefinedGlowstone]
 
 		 */
 	
-		List<ItemStack> ingotOsmium = OreDictionary.getOres("ingotOsmium");
+		//List<ItemStack> ingotOsmium = OreDictionary.getOres("ingotOsmium");
 		
 		Item item = Item.getByNameOrId("mekanism:Ingot");
 		//List<ItemStack> ingotRefinedGlowstone =  OreDictionary.getOres("ingotRefinedGlowstone");
@@ -77,7 +76,7 @@ mekanism:Ingot:3 Ores:[ ore:ingotRefinedGlowstone]
 		
 
         	if(osmiumChicken != null)
-        		osmiumChicken.setParents(ChickensMore.findChickenChickensMod("ironChicken"), ChickensMore.findChickenChickensMod("quartzChicken"));
+        		osmiumChicken.setParentsNew(ChickensMore.findChickenChickensMod("ironChicken"), ChickensMore.findChickenChickensMod("quartzChicken"));
         	
 //        	if(refinedGlowstoneChicken != null)
 //        		refinedGlowstoneChicken.setParents(osmiumChicken, ChickensMore.findChickenChickensMod("enderchicken"));

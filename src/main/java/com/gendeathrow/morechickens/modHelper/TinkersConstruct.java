@@ -1,6 +1,5 @@
 package com.gendeathrow.morechickens.modHelper;
 
-import java.util.Collection;
 import java.util.List;
 
 import net.minecraft.item.ItemStack;
@@ -142,31 +141,31 @@ public class TinkersConstruct
         // aluminumBrassIngot
 
        if(arditeIngot != null)
-        arditeChicken.setParents(ChickensMore.findChickenChickensMod("BlazeChicken"),  ChickensMore.findChickenChickensMod("magmachicken"));
+        arditeChicken.setParentsNew(ChickensMore.findChickenChickensMod("BlazeChicken"),  ChickensMore.findChickenChickensMod("magmachicken"));
        
        if(cobaltIngot != null)
-        colbaltChicken.setParents(ChickensMore.findChickenChickensMod("netherwartchicken"),  ChickensMore.findChickenChickensMod("ghastchicken"));
+        colbaltChicken.setParentsNew(ChickensMore.findChickenChickensMod("netherwartchicken"),  ChickensMore.findChickenChickensMod("ghastchicken"));
        
        if(pigIronIngot != null)
-        pigIronChicken.setParents(arditeChicken, ChickensMore.findChickenChickensMod("ironchicken"));
+        pigIronChicken.setParentsNew(arditeChicken, ChickensMore.findChickenChickensMod("ironchicken"));
        
        if(manyullynIngot != null)
-        manyullynChicken.setParents(arditeChicken, colbaltChicken);
+        manyullynChicken.setParentsNew(arditeChicken, colbaltChicken);
        
        if(knightSlimeIngot != null)
-        knightSlimeChicken.setParents(manyullynChicken, pigIronChicken);
+        knightSlimeChicken.setParentsNew(manyullynChicken, pigIronChicken);
        
        if(bloodSlime != null)
-        bloodSlimeChicken.setParents(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("RedChicken"));
+        bloodSlimeChicken.setParentsNew(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("RedChicken"));
        
        if(purpleSlime != null)
-        purpleSlimeChicken.setParents(bloodSlimeChicken, ChickensMore.findChickenChickensMod("BlueChicken"));
+        purpleSlimeChicken.setParentsNew(bloodSlimeChicken, ChickensMore.findChickenChickensMod("BlueChicken"));
        
        if(magmaSlime != null)
-        magmaSlimeChicken.setParents(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("magmachicken"));
+        magmaSlimeChicken.setParentsNew(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("magmachicken"));
        
        if(blueSlime != null)
-        blueSlimeChicken.setParents(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("BlueChicken"));
+        blueSlimeChicken.setParentsNew(ChickensMore.findChickenChickensMod("slimechicken"), ChickensMore.findChickenChickensMod("BlueChicken"));
         
 		return chickens;
 	}

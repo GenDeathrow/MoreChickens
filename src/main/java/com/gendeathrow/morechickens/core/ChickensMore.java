@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import com.gendeathrow.morechickens.modHelper.*;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -27,6 +26,13 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
 import com.gendeathrow.morechickens.core.proxies.CommonProxy;
+import com.gendeathrow.morechickens.modHelper.BaseMetals;
+import com.gendeathrow.morechickens.modHelper.Botania;
+import com.gendeathrow.morechickens.modHelper.DraconicEvolution;
+import com.gendeathrow.morechickens.modHelper.ExtremeReactors;
+import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
+import com.gendeathrow.morechickens.modHelper.Mekanism;
+import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
@@ -36,12 +42,12 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.0.8";
+	    public static final String VERSION = "1.0.9";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens@[4.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
+	    public static final String dependencies =  "required-after:chickens@[4.2.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -95,8 +101,9 @@ public class ChickensMore
 
 	        Collection<ChickensRegistryItem> allChickens = generateDefaultChickens();
 	
-	        
-	        for (ChickensRegistryItem chicken : allChickens) {
+	        for (ChickensRegistryItem chicken : allChickens) 
+	        {
+	        	
 	            boolean enabled = configuration.getBoolean("enabled", chicken.getEntityName(), true, "Is chicken enabled?");
 	            chicken.setEnabled(enabled);
 
@@ -112,7 +119,7 @@ public class ChickensMore
 	            ChickensRegistryItem parent1 = getChickenParent(configuration, "parent1", allChickens, chicken, chicken.getParent1());
 	            ChickensRegistryItem parent2 = getChickenParent(configuration, "parent2", allChickens, chicken, chicken.getParent2());
 	            if (parent1 != null && parent2 != null) {
-	                chicken.setParents(parent1, parent2);
+	                chicken.setParentsNew(parent1, parent2);
 	            } else {
 	                chicken.setNoParents();
 	            }
@@ -168,7 +175,7 @@ public class ChickensMore
 	                new ItemStack(ModItems.solidXp, 1 , 0),
 	                0x3dff1e, 0x3ff123).setSpawnType(SpawnType.NONE);
 	        
-	        xpChicken.setParents(findChicken(chickens, "emeraldchicken"), findChicken(chickens, "GreenChicken"));
+	        xpChicken.setParentsNew(findChicken(chickens, "emeraldchicken"), findChicken(chickens, "GreenChicken"));
 	        chickens.add(xpChicken);
 	        
 	        //Prismarine shard        
@@ -177,7 +184,7 @@ public class ChickensMore
 	                new ItemStack(Items.PRISMARINE_SHARD, 1 , 0),
 	                0x43806e, 0x9fcbbc).setSpawnType(SpawnType.NONE);
 	        
-	        pShardChicken.setParents(findChicken(chickens, "waterchicken"), findChicken(chickens, "bluechicken"));
+	        pShardChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "bluechicken"));
 	        chickens.add(pShardChicken);
 	        
 	        //Prismarine crystal        
@@ -186,7 +193,7 @@ public class ChickensMore
 	                new ItemStack(Items.PRISMARINE_CRYSTALS, 1 , 0),
 	                0x4e6961, 0xdfe9dc).setSpawnType(SpawnType.NONE);
 	        
-	        pCrystalChicken.setParents(findChicken(chickens, "waterchicken"), findChicken(chickens, "emeraldchicken"));
+	        pCrystalChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "emeraldchicken"));
 	        chickens.add(pCrystalChicken);
 	        
 	        chickens = TinkersConstruct.tryRegisterChickens(chickens);

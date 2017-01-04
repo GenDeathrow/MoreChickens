@@ -4,7 +4,6 @@ import java.util.List;
 
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.gendeathrow.morechickens.core.ChickensMore;
@@ -24,7 +23,7 @@ public class ImmersiveEngineering
 	public static List<ChickensRegistryItem> tryRegisterChickens(List<ChickensRegistryItem> chickens)
 	{
 		
-        ChickensMore.logger.info("Looking for Immerssive Enginner addon...");
+        ChickensMore.logger.info("Looking for Immersive Engineering addon...");
 		
        	chickens = registerChickens(chickens);
 		
@@ -75,13 +74,13 @@ public class ImmersiveEngineering
 		
 
         	if(aluminunChicken != null)
-        		aluminunChicken.setParents(ChickensMore.findChickenChickensMod("flintChicken"), ChickensMore.findChickenChickensMod("ironchicken"));
+        		aluminunChicken.setParentsNew(ChickensMore.findChickenChickensMod("flintChicken"), ChickensMore.findChickenChickensMod("ironchicken"));
         	
         	if(uraniumChicken != null)
-        		uraniumChicken.setParents( ChickensMore.findChickenChickensMod("redstonechicken"), ChickensMore.findChickenChickensMod("enderchicken"));
+        		uraniumChicken.setParentsNew( ChickensMore.findChickenChickensMod("redstonechicken"), ChickensMore.findChickenChickensMod("enderchicken"));
         	
         	if(constantanChicken != null && BaseMetals.copperChicken != null && BaseMetals.nickelChicken != null)
-        		constantanChicken.setParents(BaseMetals.copperChicken, BaseMetals.nickelChicken);
+        		constantanChicken.setParentsNew(BaseMetals.copperChicken, BaseMetals.nickelChicken);
         
 		return chickens;
 	}
