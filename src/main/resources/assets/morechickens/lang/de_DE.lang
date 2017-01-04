@@ -1,5 +1,7 @@
 itemGroup.chickens=Chickens
 
+items.morechickens.solidxp=Dichte Erfahrung
+
 entity.arditeChicken.name=Ardithuhn
 entity.colbaltChicken.name=Kobalthuhn
 entity.manyullynChicken.name=Manyullynhuhn
@@ -35,8 +37,14 @@ entity.brasschicken.name=Messinghuhn
 entity.cupronickelchicken.name=Kupfernickelhuhn
 entity.electrumchicken.name=Elektrumhuhn
 
+entity.uraniumChicken.name=Uranhuhn
+entity.aluminunChicken.name=Aluminiumhuhn
+entity.constantanChicken.name=Konstantanhuhn
+
+entity.osmiumChicken.name=Osmiumhuhn
+
 entity.yelloriumChicken.name=Yelloriumhuhn
-entity.cyaniteChicken = Cyanithuhn
-entity.blutoniumChicken = Blutoniumhuhn
-entity.ludicriteChicken = Ludicrithuhn
-entity.graphiteChicken = Graphithuhn
+entity.cyaniteChicken=Cyanithuhn
+entity.blutoniumChicken=Blutoniumhuhn
+entity.ludicriteChicken=Ludicrithuhn
+entity.graphiteChicken=Graphithuhn
