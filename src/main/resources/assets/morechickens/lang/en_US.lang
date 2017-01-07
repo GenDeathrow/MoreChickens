@@ -1,6 +1,6 @@
 itemGroup.chickens=Chickens
 
-items.morechickens.solidxp=Solid Experience
+items.morechickens.solidxp.name=Solid Experience
 
 entity.arditeChicken.name=Ardite Chicken
 entity.colbaltChicken.name=Cobalt Chicken
