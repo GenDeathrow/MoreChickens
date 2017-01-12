@@ -19,6 +19,9 @@ entity.pShardChicken.name=Prismarine Shard Chicken
 entity.xpChicken.name=Xp Chicken
 entity.pCrystalChicken.name=Prismarine Crystal Chicken
 
+entity.funwaychick.name=Funwaychick
+entity.chickenosto.name=Chickenosto
+
 entity.terrasteelchicken.name=Terrasteel Chicken
 entity.manasteelchicken.name=Manasteel Chicken
 entity.elementiumchicken.name=Elementium Chicken

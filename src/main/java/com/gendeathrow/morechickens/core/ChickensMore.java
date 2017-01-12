@@ -66,14 +66,11 @@ public class ChickensMore
 	    public void preInit(FMLPreInitializationEvent event)
 	    {
 	    	logger = event.getModLog();
-
 	    	logger.info("More Chickens PreInit...");
-	    	
 	    	ChickensMore.network = NetworkRegistry.INSTANCE.newSimpleChannel(ChickensMore.CHANNELNAME);
     	
 	    	proxy.preInit(event);
 	    	fileConfig = event.getSuggestedConfigurationFile();
-	    	
 	    }
 		
 	    @EventHandler
@@ -196,6 +193,47 @@ public class ChickensMore
 	        pCrystalChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "emeraldchicken"));
 	        chickens.add(pCrystalChicken);
 	        
+	        //Darkostos Chicken        
+	        ChickensRegistryItem chickenosto = new ChickensRegistryItem(
+	                2025, "chickenosto", new ResourceLocation(ChickensMore.MODID, "textures/entity/chickenosto.png"),
+	                new ItemStack(Items.CAKE, 1 , 0),
+	                0x4e6961, 0xdfe9dc)
+	        {
+	        	@Override
+	        	public boolean canSpawn() 
+	        	{
+	        		return true;
+	        	}
+	        	@Override
+	            public int getTier() 
+	            {
+	            	return 10;
+	            }
+	        };
+	        chickenosto.setSpawnType(SpawnType.SNOW);
+	        chickens.add(chickenosto);
+	        
+	        //Funwayguy Chicken
+	        ChickensRegistryItem funwaychick = new ChickensRegistryItem(
+	                2026, "funwaychick", new ResourceLocation(ChickensMore.MODID, "textures/entity/funwaychick.png"),
+	                new ItemStack(Items.FIRE_CHARGE, 1 , 0),
+	                0x4e6961, 0xdfe9dc){
+	        	
+	        	@Override
+	        	public boolean canSpawn() 
+	        	{
+	        		return true;
+	        	}  
+	        	@Override
+	            public int getTier() 
+	            {
+	            	return 10;
+	            }
+	        };
+	        funwaychick.setSpawnType(SpawnType.NORMAL);
+	        chickens.add(funwaychick);
+	        
+	        
 	        chickens = TinkersConstruct.tryRegisterChickens(chickens);
 	        
 	        chickens = DraconicEvolution.tryRegisterChickens(chickens);
@@ -216,6 +254,8 @@ public class ChickensMore
 	        
 	        //RandomEnchantedBook
 	        
+	        //salt chicken
+	        //coalcoaku
 	        return chickens;
 
 	    }
