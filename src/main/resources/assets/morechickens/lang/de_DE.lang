@@ -19,6 +19,9 @@ entity.pShardChicken.name=Prismarinscherbenhuhn
 entity.xpChicken.name=Erfahrungshuhn
 entity.pCrystalChicken.name=Prismarinkristallhuhn
 
+entity.funwaychick.name=Funwayhuhn
+entity.chickenosto.name=Huhnosto
+
 entity.terrasteelchicken.name=Terrastahlhuhn
 entity.manasteelchicken.name=Manastahlhuhn
 entity.elementiumchicken.name=Elementiumhuhn
