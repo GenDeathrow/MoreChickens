@@ -32,6 +32,7 @@ import com.gendeathrow.morechickens.modHelper.DraconicEvolution;
 import com.gendeathrow.morechickens.modHelper.ExtremeReactors;
 import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
 import com.gendeathrow.morechickens.modHelper.Mekanism;
+import com.gendeathrow.morechickens.modHelper.SpecialChickens;
 import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
@@ -42,12 +43,12 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.0.9";
+	    public static final String VERSION = "1.0.11";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens@[4.2.1,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
+	    public static final String dependencies =  "required-after:chickens@[4.2.2,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -101,6 +102,7 @@ public class ChickensMore
 	        for (ChickensRegistryItem chicken : allChickens) 
 	        {
 	        	
+	        	
 	            boolean enabled = configuration.getBoolean("enabled", chicken.getEntityName(), true, "Is chicken enabled?");
 	            chicken.setEnabled(enabled);
 
@@ -128,7 +130,15 @@ public class ChickensMore
 	            
 	            proxy.registerChicken(chicken);
 	        }
-
+	        
+	        
+	        for(ChickensRegistryItem specialChickens : SpecialChickens.init(new ArrayList<ChickensRegistryItem>()))
+	        {
+	        	allChickens.add(specialChickens);
+	        	ChickensRegistry.register(specialChickens);
+	        	proxy.registerChicken(specialChickens);
+	        }
+	
 	        configuration.save();
 	        
 	    }
@@ -191,48 +201,10 @@ public class ChickensMore
 	                0x4e6961, 0xdfe9dc).setSpawnType(SpawnType.NONE);
 	        
 	        pCrystalChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "emeraldchicken"));
+	        
 	        chickens.add(pCrystalChicken);
 	        
-	        //Darkostos Chicken        
-	        ChickensRegistryItem chickenosto = new ChickensRegistryItem(
-	                2025, "chickenosto", new ResourceLocation(ChickensMore.MODID, "textures/entity/chickenosto.png"),
-	                new ItemStack(Items.CAKE, 1 , 0),
-	                0x4e6961, 0xdfe9dc)
-	        {
-	        	@Override
-	        	public boolean canSpawn() 
-	        	{
-	        		return true;
-	        	}
-	        	@Override
-	            public int getTier() 
-	            {
-	            	return 10;
-	            }
-	        };
-	        chickenosto.setSpawnType(SpawnType.SNOW);
-	        chickens.add(chickenosto);
-	        
-	        //Funwayguy Chicken
-	        ChickensRegistryItem funwaychick = new ChickensRegistryItem(
-	                2026, "funwaychick", new ResourceLocation(ChickensMore.MODID, "textures/entity/funwaychick.png"),
-	                new ItemStack(Items.FIRE_CHARGE, 1 , 0),
-	                0x4e6961, 0xdfe9dc){
-	        	
-	        	@Override
-	        	public boolean canSpawn() 
-	        	{
-	        		return true;
-	        	}  
-	        	@Override
-	            public int getTier() 
-	            {
-	            	return 10;
-	            }
-	        };
-	        funwaychick.setSpawnType(SpawnType.NORMAL);
-	        chickens.add(funwaychick);
-	        
+	        //chickens = SpecialChickens.init(chickens);
 	        
 	        chickens = TinkersConstruct.tryRegisterChickens(chickens);
 	        

@@ -1,6 +1,6 @@
 itemGroup.chickens=鸡
 
-items.morechickens.solidxp.name=凝固经验
+item.morechickens.solidxp.name=凝固经验
 
 entity.arditeChicken.name=阿迪特鸡
 entity.colbaltChicken.name=钴鸡

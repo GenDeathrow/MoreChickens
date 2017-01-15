@@ -1,9 +1,11 @@
 package com.gendeathrow.morechickens.core.proxies;
 
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
+import com.gendeathrow.morechickens.handlers.SpecialChickenHandler;
 import com.setycz.chickens.ChickensRegistryItem;
 
 public class CommonProxy
@@ -31,8 +33,7 @@ public class CommonProxy
 	
 	public void registerEventHandlers()
 	{
-//		EventHandler eventhandler = new EventHandler();
-//		MinecraftForge.EVENT_BUS.register(eventhandler);
+		MinecraftForge.EVENT_BUS.register(new SpecialChickenHandler());
 	}
 	
 	public void preInit(FMLPreInitializationEvent event)

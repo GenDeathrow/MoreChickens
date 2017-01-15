@@ -5,12 +5,12 @@
   "description": "Adds Tinkers Construct and Draconic Evolution chickens for Chickens Mod",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://minecraft.curseforge.com/projects/more-chickens",
   "updateUrl": "",
   "authorList": ["GenDeathrow"],
-  "credits": "Chickens Mod",
+  "credits": "Chickens Mod, GameWalker, ACGaming, MrAmericanMike",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": ["Chickens Mod"]
 }
 ]
