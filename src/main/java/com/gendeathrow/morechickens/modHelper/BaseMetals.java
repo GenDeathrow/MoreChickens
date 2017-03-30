@@ -28,6 +28,7 @@ public class BaseMetals
 	public static ChickensRegistryItem tinChicken = null;
 	public static ChickensRegistryItem zincChicken = null;
 	public static ChickensRegistryItem steelChicken = null;
+	public static ChickensRegistryItem siliconChicken = null;
 	
 	
 	public static List<ChickensRegistryItem> tryRegisterChickens(List<ChickensRegistryItem> chickens)
@@ -80,6 +81,7 @@ public class BaseMetals
 		List<ItemStack> steelIngot =  OreDictionary.getOres("ingotSteel");
 		List<ItemStack> tinIngot = OreDictionary.getOres("ingotTin");
 		List<ItemStack> zincIngot =  OreDictionary.getOres("ingotZinc");
+		List<ItemStack> itemSilicon = OreDictionary.getOres("itemSilicon");
 
 		
 		if(invarIngot.size() > 0)
@@ -199,6 +201,15 @@ public class BaseMetals
 			chickens.add(electrumChicken);
 		}
 
+		if(itemSilicon.size() > 0)
+		{
+			siliconChicken = new ChickensRegistryItem(
+                153, "siliconchicken", new ResourceLocation(ChickensMore.MODID, skinLocation + "silicon_chicken.png"),
+                itemSilicon.get(0).copy(),
+                0x5f706b, 0x424242).setSpawnType(SpawnType.NONE);
+			chickens.add(siliconChicken);
+		}
+
         
 		if(brassChicken != null)
 			brassChicken.setParentsNew(copperChicken, zincChicken);
@@ -235,9 +246,12 @@ public class BaseMetals
 		
 		if(silverOreChicken != null)
 			silverOreChicken.setParentsNew(ChickensMore.findChickenChickensMod("IronChicken"), ChickensMore.findChickenChickensMod("WhiteChicken"));	
-	
+
 		if(platinumChicken != null)
 			platinumChicken.setParentsNew(nickelChicken, silverOreChicken);	
+		
+		if(siliconChicken != null)
+			siliconChicken.setParentsNew(ChickensMore.findChickenChickensMod("FlintChicken"), ChickensMore.findChickenChickensMod("SandChicken"));	
 		
 		return chickens;
 	}

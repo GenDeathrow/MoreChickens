@@ -39,6 +39,7 @@ entity.copperchicken.name=Kupferhuhn
 entity.brasschicken.name=Messinghuhn
 entity.cupronickelchicken.name=Kupfernickelhuhn
 entity.electrumchicken.name=Elektrumhuhn
+entity.siliconchicken.name=Siliziumhuhn
 
 entity.uraniumChicken.name=Uranhuhn
 entity.aluminunChicken.name=Aluminiumhuhn
@@ -51,3 +52,12 @@ entity.cyaniteChicken=Cyanithuhn
 entity.blutoniumChicken=Blutoniumhuhn
 entity.ludicriteChicken=Ludicrithuhn
 entity.graphiteChicken=Graphithuhn
+
+entity.electricalSteelChicken.name=Elektrischer Stahl-Huhn
+entity.energeticAlloyChicken.name=Energetisierte Legierungs-Huhn
+entity.vibrantAlloyChicken.name=Dynamische Legierungs-Huhn
+entity.redstoneAlloyChicken.name=Redstone-Legierungs-Huhn
+entity.conductiveIronChicken.name=Leitendes Eisen-Huhn
+entity.pulsatingIronChicken.name=Pulsierendes Eisen-Huhn
+entity.darkSteelChicken.name=Dukelstahlhuhn
+entity.soulariumChicken.name=Soulariumhuhn

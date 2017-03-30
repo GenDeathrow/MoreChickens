@@ -39,6 +39,7 @@ entity.copperchicken.name=Copper Chicken
 entity.brasschicken.name=Brass Chicken
 entity.cupronickelchicken.name=Cupronickel Chicken
 entity.electrumchicken.name=Electrum Chicken
+entity.siliconchicken.name=Silicon Chicken
 
 entity.uraniumChicken.name=Uranium Chicken
 entity.aluminunChicken.name=Aluminium Chicken
@@ -51,3 +52,12 @@ entity.cyaniteChicken.name=Cyanite Chicken
 entity.blutoniumChicken.name=Blutonium Chicken
 entity.ludicriteChicken.name=Ludicrite Chicken
 entity.graphiteChicken.name=Graphite Chicken
+
+entity.electricalSteelChicken.name=Electrical Steel Chicken
+entity.energeticAlloyChicken.name=Energetic Alloy Chicken
+entity.vibrantAlloyChicken.name=Vibrant Alloy Chicken
+entity.redstoneAlloyChicken.name=Redstone Alloy Chicken
+entity.conductiveIronChicken.name=Conductive Iron Chicken
+entity.pulsatingIronChicken.name=Pulsating Iron Chicken
+entity.darkSteelChicken.name=Dark Steel Chicken
+entity.soulariumChicken.name=Soularium Chicken
