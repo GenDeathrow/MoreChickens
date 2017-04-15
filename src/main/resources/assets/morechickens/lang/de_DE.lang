@@ -51,3 +51,18 @@ entity.cyaniteChicken=Cyanithuhn
 entity.blutoniumChicken=Blutoniumhuhn
 entity.ludicriteChicken=Ludicrithuhn
 entity.graphiteChicken=Graphithuhn
+
+entity.sulfurchicken.name=Schwefelhuhn
+entity.saltpeterchicken.name=Salpeterhuhn
+
+entity.basalzRodChicken.name=Basalzrutenhuhn
+entity.blitzRodChicken.name=Blitzrutenhuhn
+entity.blizzRodChicken.name=Blizzrutenhuhn
+entity.cinnabarChicken.name=Zinnoberhuhn
+entity.enderiumChicken.name=Enderiumhuhn
+entity.iridiumChicken.name=Iridiumhuhn
+entity.lumiumChicken.name=Lumiumhuhn
+entity.mithrilChicken.name=mit Mana infundiertes Huhn
+entity.signalumChicken.name=Signalumhuhn
+entity.richSlagChicken.name=Richhaltiges Schlackenhuhn
+entity.slagChicken.name=Schlackenhuhn
