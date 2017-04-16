@@ -34,7 +34,9 @@ import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
 import com.gendeathrow.morechickens.modHelper.Mekanism;
 import com.gendeathrow.morechickens.modHelper.SpecialChickens;
 import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
+import com.gendeathrow.morechickens.modHelper.EnderIO;
 import com.gendeathrow.morechickens.modHelper.ThermalFoundation;
+
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
@@ -221,7 +223,10 @@ public class ChickensMore
 
 	        chickens = ExtremeReactors.tryRegisterChickens(chickens);
 
-	        chickens = ThermalFoundation.tryRegisterChickens(chickens);
+
+	        chickens = EnderIO.tryRegisterChickens(chickens);
+        chickens = ThermalFoundation.tryRegisterChickens(chickens);
+
 	        
 	        //RF CHICKEN
 	 
