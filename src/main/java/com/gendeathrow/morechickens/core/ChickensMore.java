@@ -11,6 +11,7 @@ import java.util.List;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.launchwrapper.Launch;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.fml.common.Mod;
@@ -25,18 +26,22 @@ import net.minecraftforge.fml.common.network.FMLEventChannel;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 
-import com.gendeathrow.morechickens.core.proxies.CommonProxy;
-import com.gendeathrow.morechickens.modHelper.BaseMetals;
-import com.gendeathrow.morechickens.modHelper.Botania;
-import com.gendeathrow.morechickens.modHelper.DraconicEvolution;
-import com.gendeathrow.morechickens.modHelper.ExtremeReactors;
-import com.gendeathrow.morechickens.modHelper.ImmersiveEngineering;
-import com.gendeathrow.morechickens.modHelper.Mekanism;
-import com.gendeathrow.morechickens.modHelper.SpecialChickens;
-import com.gendeathrow.morechickens.modHelper.TinkersConstruct;
-import com.gendeathrow.morechickens.modHelper.EnderIO;
-import com.gendeathrow.morechickens.modHelper.ThermalFoundation;
+import org.apache.logging.log4j.Level;
 
+import com.gendeathrow.morechickens.core.proxies.CommonProxy;
+import com.gendeathrow.morechickens.modHelper.BaseMetalsAddon;
+import com.gendeathrow.morechickens.modHelper.BaseModAddon;
+import com.gendeathrow.morechickens.modHelper.BotaniaAddon;
+import com.gendeathrow.morechickens.modHelper.DraconicEvolutionAddon;
+import com.gendeathrow.morechickens.modHelper.EnderIOAddon;
+import com.gendeathrow.morechickens.modHelper.ExtremeReactorsAddon;
+import com.gendeathrow.morechickens.modHelper.ImmersiveEngineeringAddon;
+import com.gendeathrow.morechickens.modHelper.MekanismAddon;
+import com.gendeathrow.morechickens.modHelper.MoreChickens;
+import com.gendeathrow.morechickens.modHelper.SpecialChickens;
+import com.gendeathrow.morechickens.modHelper.ThermalFoundationAddon;
+import com.gendeathrow.morechickens.modHelper.TinkersConstructAddon;
+import com.gendeathrow.morechickens.util.LogUtil;
 import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
@@ -51,7 +56,14 @@ public class ChickensMore
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
-	    public static final String dependencies =  "required-after:chickens@[4.2.2,);after:Botania;after:tconstruct;after:draconicevolution;after:mekanism;after:bigreactors";
+	    public static final String dependencies =  "required-after:chickens@[4.2.2,);"
+	    		+ "after:Botania;"
+	    		+ "after:tconstruct;"
+	    		+ "after:draconicevolution;"
+	    		+ "after:mekanism;"
+	    		+ "after:bigreactors;"
+	    		+ "after:EnderIO;"
+	    		+ "after:thermalfoundation";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -62,17 +74,22 @@ public class ChickensMore
 		public static SimpleNetworkWrapper network;
 		 
 		public static FMLEventChannel channel;
-		
-	    public static org.apache.logging.log4j.Logger logger;
+
+	    public static boolean isDev = (Boolean) Launch.blackboard.get("fml.deobfuscatedEnvironment");
 
 	    File fileConfig;
 	    @EventHandler
 	    public void preInit(FMLPreInitializationEvent event)
 	    {
-	    	logger = event.getModLog();
-	    	logger.info("More Chickens PreInit...");
+	    	LogUtil.setup();
+	    	
+	    	//logger = LogUtil;	   
+	    	LogUtil.log(Level.DEBUG, "is Dev"+ isDev);
+	    	LogUtil.info("More Chickens PreInit...");
 	    	ChickensMore.network = NetworkRegistry.INSTANCE.newSimpleChannel(ChickensMore.CHANNELNAME);
     	
+	    	RegisterModAddons();
+	    	
 	    	proxy.preInit(event);
 	    	fileConfig = event.getSuggestedConfigurationFile();
 	    }
@@ -80,7 +97,7 @@ public class ChickensMore
 	    @EventHandler
 	    public void init(FMLInitializationEvent event) throws IOException
 	    {
-	    	logger.info("More Chickens Init...");
+	    	LogUtil.info("More Chickens Init...");
 	    	
 	    	proxy.init(event);
 	    	
@@ -97,11 +114,14 @@ public class ChickensMore
 	    
 	    private void loadConfiguration(File configFile) 
 	    {
-	    	logger.info("More Chickens Loading Config...");
+
 	        Configuration configuration = new Configuration(configFile);
 
 	        Collection<ChickensRegistryItem> allChickens = generateDefaultChickens();
-	
+	    	
+	        configuration.addCustomCategoryComment("0", "It is Ideal to regenerate this file after updates as your config files may overwrite changes made to core.");
+	    	
+	        LogUtil.info("More Chickens Loading Config...");
 	        for (ChickensRegistryItem chicken : allChickens) 
 	        {
 	        	
@@ -118,8 +138,12 @@ public class ChickensMore
 	            ItemStack dropItemStack = loadItemStack(configuration, chicken, "drop", chicken.createDropItem());
 	            chicken.setDropItem(dropItemStack);
 
-	            ChickensRegistryItem parent1 = getChickenParent(configuration, "parent1", allChickens, chicken, chicken.getParent1());
-	            ChickensRegistryItem parent2 = getChickenParent(configuration, "parent2", allChickens, chicken, chicken.getParent2());
+	            String parent1ID = getChickenParent(configuration, "parent1", allChickens, chicken, chicken.getParent1());
+	            String parent2ID =  getChickenParent(configuration, "parent2", allChickens, chicken, chicken.getParent2());
+	            
+	            ChickensRegistryItem parent1 = findChicken(allChickens, parent1ID);
+	            ChickensRegistryItem parent2 = findChicken(allChickens, parent2ID);
+	            
 	            if (parent1 != null && parent2 != null) {
 	                chicken.setParentsNew(parent1, parent2);
 	            } else {
@@ -175,75 +199,62 @@ public class ChickensMore
 		{
 
 		}
+		
+		public ArrayList<BaseModAddon> registeredModAddons = new ArrayList<BaseModAddon>();
+		
+		private void RegisterModAddons()
+		{
+			addModAddon(new MoreChickens());
+			addModAddon(new BaseMetalsAddon());
+			addModAddon(new BotaniaAddon());
+			addModAddon(new DraconicEvolutionAddon());
+			addModAddon(new EnderIOAddon());
+			addModAddon(new ExtremeReactorsAddon());
+			addModAddon(new ImmersiveEngineeringAddon());
+			addModAddon(new MekanismAddon());
+			addModAddon(new ThermalFoundationAddon());
+			addModAddon(new TinkersConstructAddon());
+			
+		}
+		
+		public void addModAddon(BaseModAddon addon)
+		{
+			if(addon == null)
+			{
+				LogUtil.error("Tried to add null mod addon");
+				return;
+			}
+			
+			registeredModAddons.add(addon);
+		}
 
 	    private List<ChickensRegistryItem> generateDefaultChickens() 
 	    {
 	        List<ChickensRegistryItem> chickens = new ArrayList<ChickensRegistryItem>();
 
-	        ChickensRegistryItem xpChicken = new ChickensRegistryItem(
-	                500, "xpChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/XpChicken.png"),
-	                new ItemStack(ModItems.solidXp, 1 , 0),
-	                0x3dff1e, 0x3ff123).setSpawnType(SpawnType.NONE);
+	        for(BaseModAddon addon : registeredModAddons)
+	        {
+	        	chickens = addon.tryRegisterChickens(chickens);
+	        }
 	        
-	        xpChicken.setParentsNew(findChicken(chickens, "emeraldchicken"), findChicken(chickens, "GreenChicken"));
-	        chickens.add(xpChicken);
+	        //SetParents
 	        
-	        //Prismarine shard        
-	        ChickensRegistryItem pShardChicken = new ChickensRegistryItem(
-	                501, "pShardChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/PShardChicken.png"),
-	                new ItemStack(Items.PRISMARINE_SHARD, 1 , 0),
-	                0x43806e, 0x9fcbbc).setSpawnType(SpawnType.NONE);
+	        for(BaseModAddon addon : registeredModAddons)
+	        {
+	        	LogUtil.debug("Register "+ addon.getModName() + " Parents");
+	        	addon.RegisterAllParents(chickens);
+	        }	        
 	        
-	        pShardChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "bluechicken"));
-	        chickens.add(pShardChicken);
-	        
-	        //Prismarine crystal        
-	        ChickensRegistryItem pCrystalChicken = new ChickensRegistryItem(
-	                502, "pCrystalChicken", new ResourceLocation(ChickensMore.MODID, "textures/entity/PCrystalChicken.png"),
-	                new ItemStack(Items.PRISMARINE_CRYSTALS, 1 , 0),
-	                0x4e6961, 0xdfe9dc).setSpawnType(SpawnType.NONE);
-	        
-	        pCrystalChicken.setParentsNew(findChicken(chickens, "waterchicken"), findChicken(chickens, "emeraldchicken"));
-	        
-	        chickens.add(pCrystalChicken);
-	        
-	        //chickens = SpecialChickens.init(chickens);
-	        
-	        chickens = TinkersConstruct.tryRegisterChickens(chickens);
-	        
-	        chickens = DraconicEvolution.tryRegisterChickens(chickens);
-	        
-	        chickens = Botania.tryRegisterChickens(chickens);
-	        
-	        chickens = BaseMetals.tryRegisterChickens(chickens);
-	        
-	        chickens = ImmersiveEngineering.tryRegisterChickens(chickens);
-	        
-	        chickens = Mekanism.tryRegisterChickens(chickens);
-
-	        chickens = ExtremeReactors.tryRegisterChickens(chickens);
-
-
-	        chickens = EnderIO.tryRegisterChickens(chickens);
-        chickens = ThermalFoundation.tryRegisterChickens(chickens);
-
-	        
-	        //RF CHICKEN
-	 
-	        //RandomPotion
-	        
-	        //RandomEnchantedBook
-	        
-	        //salt chicken
-	        //coalcoaku
 	        return chickens;
 
 	    }
 	    
-	    private ChickensRegistryItem getChickenParent(Configuration configuration, String propertyName, Collection<ChickensRegistryItem> allChickens, ChickensRegistryItem chicken, ChickensRegistryItem parent) 
+	    private String getChickenParent(Configuration configuration, String propertyName, Collection<ChickensRegistryItem> allChickens, ChickensRegistryItem chicken, ChickensRegistryItem parent) 
 	    {
-	        String parentName = configuration.getString(propertyName, chicken.getEntityName(), parent != null ? parent.getEntityName() : "", "First parent, empty if it's base chicken.");
-	        return findChicken(allChickens, parentName);
+	        //String parentName = 
+	        //return findChicken(allChickens, parentName);
+	        
+	        return configuration.getString(propertyName, chicken.getEntityName(), parent != null ? parent.getEntityName() : "", "First parent, empty if it's base chicken.");
 	    }
 	    
 	    // Looks for a chicken inside MoreChickens
