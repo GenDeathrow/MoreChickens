@@ -51,15 +51,17 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.0.11";
+	    public static final String VERSION = "1.1.2";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";
 	    
 	    public static final String dependencies =  "required-after:chickens@[4.2.2,);"
 	    		+ "after:Botania;"
+	    		+ "after:basemetals;"
 	    		+ "after:tconstruct;"
 	    		+ "after:draconicevolution;"
+	    		+ "after:immersiveengineering;"
 	    		+ "after:mekanism;"
 	    		+ "after:bigreactors;"
 	    		+ "after:EnderIO;"
@@ -84,7 +86,7 @@ public class ChickensMore
 	    	LogUtil.setup();
 	    	
 	    	//logger = LogUtil;	   
-	    	LogUtil.log(Level.DEBUG, "is Dev"+ isDev);
+	    	LogUtil.log(Level.DEBUG, "is Dev "+ isDev);
 	    	LogUtil.info("More Chickens PreInit...");
 	    	ChickensMore.network = NetworkRegistry.INSTANCE.newSimpleChannel(ChickensMore.CHANNELNAME);
     	

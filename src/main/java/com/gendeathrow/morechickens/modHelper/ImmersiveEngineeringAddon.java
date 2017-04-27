@@ -20,7 +20,9 @@ public class ImmersiveEngineeringAddon extends BaseModAddon
 		this.setStartID(2001);
 	}
 
-
+	/**
+	 * Textures Created by "MrAmericanMike"
+	 */
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
 	{

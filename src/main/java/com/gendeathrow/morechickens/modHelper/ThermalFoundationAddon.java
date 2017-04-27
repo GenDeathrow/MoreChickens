@@ -27,6 +27,9 @@ public class ThermalFoundationAddon extends BaseModAddon{
 		setStartID(2060);
 	}
 
+	/**
+	 * Textures Created by "bogger33"
+	 */
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
 	{
@@ -35,7 +38,7 @@ public class ThermalFoundationAddon extends BaseModAddon{
 				this.nextID(), 
 				"basalz_rod_chicken.png", 
 				this.getFirstOreDictionary("rodBasalz"), 
-				0xECE992, 0x66E5EF, 
+				0x980000, 0x6E6664, 
 				SpawnType.NONE);
 		
 		blitzRodChicken = addChicken(allChickens, 

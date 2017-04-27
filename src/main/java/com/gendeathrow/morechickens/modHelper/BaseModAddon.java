@@ -10,6 +10,7 @@ import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.oredict.OreDictionary;
 
 import com.gendeathrow.morechickens.core.ChickensMore;
+import com.gendeathrow.morechickens.util.ChickenInformation;
 import com.gendeathrow.morechickens.util.LogUtil;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
@@ -126,7 +127,9 @@ public abstract class BaseModAddon
 		
 		ChickensRegistryItem chicken = new ChickensRegistryItem( chickenID, chickenName, new ResourceLocation(ChickensMore.MODID, this.texturesLocation + texture), layItem.copy(), bgColor, fgColor).setSpawnType(spawntype);
 		
-		chickenList.add(chicken);		
+		chickenList.add(chicken);
+		
+		ChickenInformation.AddChickenInformation(chickenID, new ChickenInformation(ChickensMore.NAME, "", this.getModName()));
 		
 		return chicken;
 	}

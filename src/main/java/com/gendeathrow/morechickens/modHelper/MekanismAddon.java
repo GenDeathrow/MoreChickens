@@ -21,6 +21,9 @@ public class MekanismAddon extends BaseModAddon{
 		this.setStartID(2010);
 	}
 
+	/**
+	 * Textures Created by "MrAmericanMike"
+	 */
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
 	{

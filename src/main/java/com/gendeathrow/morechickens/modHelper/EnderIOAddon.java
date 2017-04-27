@@ -24,7 +24,9 @@ public class EnderIOAddon extends BaseModAddon
 		super("EnderIO", "EnderIO", "textures/entity/enderio/");
 		this.setStartID(2030);
 	}
-
+	/**
+	 * 	Created By: bogger33
+	 */
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
 	{

@@ -78,3 +78,10 @@ entity.signalumChicken.name=Signalum Chicken
 entity.richSlagChicken.name=Rich Slag Chicken
 entity.slagChicken.name=Slag Chicken
 
+
+
+text.morechickens.notbreedable=Can't be breed
+text.morechickens.breedable=Breed
+text.morechickens.spawnType=SpawnType
+text.morechickens.layitem=Lay Item: %1$s
+text.morechickens.nolayitem=Lay Item: Null
