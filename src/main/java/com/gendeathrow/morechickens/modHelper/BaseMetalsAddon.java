@@ -3,6 +3,7 @@ package com.gendeathrow.morechickens.modHelper;
 import java.util.List;
 
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.item.ItemStack;
 
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.setycz.chickens.ChickensRegistryItem;
@@ -35,7 +36,7 @@ public class BaseMetalsAddon extends BaseModAddon
 	public static ChickensRegistryItem siliconChicken = null;
 	public static ChickensRegistryItem sulfurChicken = null;
 	public static ChickensRegistryItem saltpeterChicken = null;
-
+	public static ChickensRegistryItem aluminumChicken = null;
 
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
@@ -168,6 +169,17 @@ public class BaseMetalsAddon extends BaseModAddon
 				0xDDD6D6, 0xAC9E9D, 
 				SpawnType.NONE); 
 		
+        ItemStack ingotAlu = this.getFirstOreDictionary("ingotAluminum");
+        if(ingotAlu == null) ingotAlu = this.getFirstOreDictionary("ingotAluminium");
+
+		aluminumChicken = addChicken(allChickens, 
+				"aluminumChicken", 
+				this.nextID(), 
+				"aluminium_chicken.png", 
+				ingotAlu, 
+				0xd3dddc, 0xcbd7d6, 
+				SpawnType.NONE);
+
 		return allChickens;
 	}
 
@@ -190,7 +202,8 @@ public class BaseMetalsAddon extends BaseModAddon
 		setParents(platinumChicken, nickelChicken, silverOreChicken);
 		setParents(sulfurChicken, GunpowderChicken, FlintChicken);
 		setParents(saltpeterChicken, sulfurChicken, RedstoneChicken);
-		setParents(siliconChicken, ClayChicken, SandChicken);	
+		setParents(siliconChicken, ClayChicken, SandChicken);
+		setParents(aluminumChicken, FlintChicken, IronChicken);	
 	}
 
 

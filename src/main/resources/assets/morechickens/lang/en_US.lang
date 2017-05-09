@@ -44,7 +44,7 @@ entity.electrumchicken.name=Electrum Chicken
 entity.siliconchicken.name=Silicon Chicken
 
 entity.uraniumChicken.name=Uranium Chicken
-entity.aluminunChicken.name=Aluminium Chicken
+entity.aluminumChicken.name=Aluminium Chicken
 entity.constantanChicken.name=Constantan Chicken
 
 entity.osmiumChicken.name=Osmium Chicken
@@ -80,7 +80,7 @@ entity.slagChicken.name=Slag Chicken
 
 
 
-text.morechickens.notbreedable=Can't be breed
+text.morechickens.notbreedable=Can't be bred
 text.morechickens.breedable=Breed
 text.morechickens.spawnType=SpawnType
 text.morechickens.layitem=Lay Item: %1$s
