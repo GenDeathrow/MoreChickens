@@ -53,14 +53,13 @@ entity.blutoniumChicken=Blutoniumhuhn
 entity.ludicriteChicken=Ludicrithuhn
 entity.graphiteChicken=Graphithuhn
 
-
 entity.electricalSteelChicken.name=Elektrischer Stahl-Huhn
 entity.energeticAlloyChicken.name=Energetisierte Legierungs-Huhn
 entity.vibrantAlloyChicken.name=Dynamische Legierungs-Huhn
 entity.redstoneAlloyChicken.name=Redstone-Legierungs-Huhn
 entity.conductiveIronChicken.name=Leitendes Eisen-Huhn
 entity.pulsatingIronChicken.name=Pulsierendes Eisen-Huhn
-entity.darkSteelChicken.name=Dukelstahlhuhn
+entity.darkSteelChicken.name=Dunkelstahlhuhn
 entity.soulariumChicken.name=Soulariumhuhn
 entity.sulfurchicken.name=Schwefelhuhn
 entity.saltpeterchicken.name=Salpeterhuhn
@@ -72,13 +71,13 @@ entity.cinnabarChicken.name=Zinnoberhuhn
 entity.enderiumChicken.name=Enderiumhuhn
 entity.iridiumChicken.name=Iridiumhuhn
 entity.lumiumChicken.name=Lumiumhuhn
-entity.mithrilChicken.name=mit Mana infundiertes Huhn
+entity.mithrilChicken.name=Mana-infundiertes Huhn
 entity.signalumChicken.name=Signalumhuhn
-entity.richSlagChicken.name=Richhaltiges Schlackenhuhn
-entity.slagChicken.name=Schlackenhuhn
+entity.richSlagChicken.name=Reichhaltiges Schlackehuhn
+entity.slagChicken.name=Schlackehuhn
 
 text.morechickens.notbreedable=Kann nicht gezüchtet werden
 text.morechickens.breedable=Züchten
-text.morechickens.spawnType=Spawn Typ
+text.morechickens.spawnType=Spawn-Typ
 text.morechickens.layitem=Legt Item: %1$s
 text.morechickens.nolayitem=Legt Item: Nichts
