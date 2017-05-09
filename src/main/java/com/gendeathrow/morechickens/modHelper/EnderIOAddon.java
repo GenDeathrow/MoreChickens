@@ -41,7 +41,7 @@ public class EnderIOAddon extends BaseModAddon
 		energeticAlloyChicken = addChicken(allChickens, 
 				"energeticAlloyChicken", 
 				this.nextID(), 
-				"vibrant_alloy_chicken.png", 
+				"energetic_alloy_chicken.png", 
 				this.getFirstOreDictionary("ingotEnergeticAlloy"), 
 				0xea6c05, 0x65321b, 
 				SpawnType.NONE);
@@ -49,7 +49,7 @@ public class EnderIOAddon extends BaseModAddon
 		vibrantAlloyChicken = addChicken(allChickens, 
 				"vibrantAlloyChicken", 
 				this.nextID(), 
-				"energetic_alloy_chicken.png", 
+				"vibrant_alloy_chicken.png", 
 				this.getFirstOreDictionary("ingotVibrantAlloy"), 
 				0xbcf239, 0x779c1d, 
 				SpawnType.NONE);
