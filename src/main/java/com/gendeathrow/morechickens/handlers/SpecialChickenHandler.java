@@ -41,6 +41,10 @@ public class SpecialChickenHandler
         	chickenDescription = SpecialChickens.chickenosto;
         if(item.getItem() == Item.getItemFromBlock(Blocks.TNT))
         	chickenDescription = SpecialChickens.funwaychick;
+        if(item.getItem() == Item.getItemFromBlock(Blocks.GRASS))
+        	chickenDescription = SpecialChickens.boopbeepchick;
+        if(item.getItem() == Items.BANNER)
+        	chickenDescription = SpecialChickens.mramericanchick;
         
         if (chickenDescription == null || !chickenDescription.isEnabled()) {
             return;

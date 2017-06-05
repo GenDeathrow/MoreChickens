@@ -17,6 +17,7 @@ public class SpecialChickens
 	public static ChickensRegistryItem chickenosto;
 	public static ChickensRegistryItem funwaychick;
 	public static ChickensRegistryItem boopbeepchick;
+	public static ChickensRegistryItem mramericanchick;
 	
 	public static List<ChickensRegistryItem> init(List<ChickensRegistryItem> allChickens)
 	{
@@ -84,9 +85,29 @@ public class SpecialChickens
         };
         boopbeepchick.setNoParents();
         boopbeepchick.setSpawnType(SpawnType.NONE);
-
-        
         allChickens.add(boopbeepchick);
+        
+        
+        //MrAmericanMike Chicken
+        mramericanchick = new ChickensRegistryItem(
+                2028, "mramericanchick", new ResourceLocation(ChickensMore.MODID, "textures/entity/mr_american_chick.png"),
+                new ItemStack(Items.BANNER, 1),
+                0x215a1b, 0x546E34){
+        	
+        	@Override
+        	public boolean canSpawn() 
+        	{
+        		return true;
+        	}  
+        	@Override
+            public int getTier() 
+            {
+            	return 5;
+            }
+        };
+        mramericanchick.setNoParents();
+        mramericanchick.setSpawnType(SpawnType.NONE);
+        allChickens.add(mramericanchick);
         
         return allChickens;
 	}
