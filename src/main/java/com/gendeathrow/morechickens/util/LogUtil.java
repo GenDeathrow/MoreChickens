@@ -91,9 +91,9 @@ public class LogUtil
         File logDirectory = new File("./logs/morechickens/");
         logDirectory.mkdirs();
         
-        String baseName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
+        //String baseName = new SimpleDateFormat("yyyy-MM-dd").format(new Date());
         
-        int i = 0;
+        //int i = 0;
         
         // One-liners for the win
         //for (; (logFile = new File(logDirectory, baseName + "-" + i + ".log")).exists(); i++);

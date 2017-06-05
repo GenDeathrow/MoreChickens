@@ -2,10 +2,8 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.item.ItemStack;
 
-import com.gendeathrow.morechickens.core.ChickensMore;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
 

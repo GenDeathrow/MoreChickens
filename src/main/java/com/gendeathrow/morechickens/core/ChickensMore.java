@@ -8,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.launchwrapper.Launch;
@@ -51,7 +50,7 @@ public class ChickensMore
 {
 
 		public static final String MODID = "morechickens";
-	    public static final String VERSION = "1.1.2";
+	    public static final String VERSION = "1.1.3";
 	    public static final String NAME = "More Chickens";
 	    public static final String PROXY = "com.gendeathrow.morechickens.core.proxies";
 	    public static final String CHANNELNAME = "morechickens";

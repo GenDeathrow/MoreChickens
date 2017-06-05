@@ -2,7 +2,6 @@ package com.gendeathrow.morechickens.items;
 
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.item.EntityExpBottle;
 import net.minecraft.entity.item.EntityXPOrb;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.init.SoundEvents;
@@ -54,7 +53,7 @@ public class SolidXp extends Item
             worldIn.spawnEntityInWorld(entityexp);
     	}
         playerIn.addStat(StatList.getObjectUseStats(this));
-    	return new ActionResult(EnumActionResult.SUCCESS, itemStackIn);
+    	return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
     }
 
 }
