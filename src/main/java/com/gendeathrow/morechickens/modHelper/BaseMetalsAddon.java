@@ -199,7 +199,7 @@ public class BaseMetalsAddon extends BaseModAddon
 				"amethystchicken", 
 				this.nextID(), 
 				"amethyst_chicken.png", 
-				this.getFirstOreDictionary("gemRuby"), 
+				this.getFirstOreDictionary("gemAmethyst"), 
 				0xE051ED, 0x841D8E, 
 				SpawnType.NONE);
 
