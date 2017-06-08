@@ -35,6 +35,15 @@ public class BaseMetalsAddon extends BaseModAddon
 	public static ChickensRegistryItem sulfurChicken = null;
 	public static ChickensRegistryItem saltpeterChicken = null;
 	public static ChickensRegistryItem aluminumChicken = null;
+	public static ChickensRegistryItem amberChicken = null;
+	public static ChickensRegistryItem amethystChicken = null;
+	public static ChickensRegistryItem malachiteChicken = null;
+	public static ChickensRegistryItem peridotChicken = null;
+	public static ChickensRegistryItem rubyChicken = null;
+	public static ChickensRegistryItem sapphireChicken = null;
+	public static ChickensRegistryItem tanzaniteChicken = null;
+	public static ChickensRegistryItem topazChicken = null;
+	public static ChickensRegistryItem garnetChicken = null;
 
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 
@@ -167,8 +176,8 @@ public class BaseMetalsAddon extends BaseModAddon
 				0xDDD6D6, 0xAC9E9D, 
 				SpawnType.NONE); 
 		
-        ItemStack ingotAlu = this.getFirstOreDictionary("ingotAluminum");
-        if(ingotAlu == null) ingotAlu = this.getFirstOreDictionary("ingotAluminium");
+		ItemStack ingotAlu = this.getFirstOreDictionary("ingotAluminum");
+		if(ingotAlu == null) ingotAlu = this.getFirstOreDictionary("ingotAluminium");
 
 		aluminumChicken = addChicken(allChickens, 
 				"aluminumChicken", 
@@ -176,6 +185,81 @@ public class BaseMetalsAddon extends BaseModAddon
 				"aluminium_chicken.png", 
 				ingotAlu, 
 				0xd3dddc, 0xcbd7d6, 
+				SpawnType.NONE);
+
+		amberChicken = addChicken(allChickens, 
+				"amberchicken", 
+				this.nextID(), 
+				"amber_chicken.png", 
+				this.getFirstOreDictionary("gemAmber"), 
+				0xFFAD21, 0x7F5113, 
+				SpawnType.NONE);
+
+		amethystChicken = addChicken(allChickens, 
+				"amethystchicken", 
+				this.nextID(), 
+				"amethyst_chicken.png", 
+				this.getFirstOreDictionary("gemRuby"), 
+				0xE051ED, 0x841D8E, 
+				SpawnType.NONE);
+
+		malachiteChicken = addChicken(allChickens, 
+				"malachitechicken", 
+				this.nextID(), 
+				"malachite_chicken.png", 
+				this.getFirstOreDictionary("gemMalachite"), 
+				0x29B17F, 0x085F50, 
+				SpawnType.NONE);
+
+		peridotChicken = addChicken(allChickens, 
+				"peridotchicken", 
+				this.nextID(), 
+				"peridot_chicken.png", 
+				this.getFirstOreDictionary("gemPeridot"), 
+				0x6CA127, 0x29430B, 
+				SpawnType.NONE);
+
+		rubyChicken = addChicken(allChickens, 
+				"rubychicken", 
+				this.nextID(), 
+				"ruby_chicken.png", 
+				this.getFirstOreDictionary("gemRuby"), 
+				0xB7002E, 0x5A0116, 
+				SpawnType.NONE);
+
+		sapphireChicken = addChicken(allChickens, 
+				"sapphirechicken", 
+				this.nextID(), 
+				"sapphire_chicken.png", 
+				this.getFirstOreDictionary("gemSapphire"), 
+				0x19689A, 0x0D4565, 
+				SpawnType.NONE);
+
+		tanzaniteChicken = addChicken(allChickens, 
+				"tanzanitechicken", 
+				this.nextID(), 
+				"tanzanite_chicken.png", 
+				this.getFirstOreDictionary("gemTanzanite"), 
+				0x7310C0, 0x5A007F, 
+				SpawnType.NONE);
+
+		topazChicken = addChicken(allChickens, 
+				"topazchicken", 
+				this.nextID(), 
+				"topaz_chicken.png", 
+				this.getFirstOreDictionary("gemTopaz"), 
+				0xD64D00, 0x7C3400, 
+				SpawnType.NONE);		
+		
+		ItemStack gemGarnet = this.getFirstOreDictionary("gemGarnet");
+		if(gemGarnet == null) gemGarnet = this.getFirstOreDictionary("gemRedGarnet"); //TechReborn
+
+		garnetChicken = addChicken(allChickens, 
+				"garnetchicken", 
+				this.nextID(), 
+				"garnet_chicken.png", 
+				gemGarnet, 
+				0xA45962, 0x44171A, 
 				SpawnType.NONE);
 
 		return allChickens;
@@ -202,6 +286,32 @@ public class BaseMetalsAddon extends BaseModAddon
 		setParents(saltpeterChicken, sulfurChicken, RedstoneChicken);
 		setParents(siliconChicken, ClayChicken, SandChicken);
 		setParents(aluminumChicken, FlintChicken, IronChicken);	
+		setParents(amberChicken, WaterChicken, LogChicken);
+		setParents(amethystChicken, GhastChicken, PurpleChicken);
+		if(this.getFirstOreDictionary("ingotCopper") != null)
+			setParents(malachiteChicken, copperChicken, CoalChicken);
+		else
+			setParents(malachiteChicken, GreenChicken, CoalChicken);
+		if(this.getFirstOreDictionary("itemSilicon") != null)
+			setParents(peridotChicken, siliconChicken, GreenChicken);
+		else
+			setParents(peridotChicken, QuartzChicken, GreenChicken);
+		if(this.getFirstOreDictionary("ingotAluminum") != null || this.getFirstOreDictionary("ingotAluminium") != null)
+		{
+			setParents(sapphireChicken, BlueChicken, aluminumChicken);
+			setParents(rubyChicken, RedChicken, aluminumChicken);
+		}
+		else
+		{
+			setParents(sapphireChicken, BlueChicken, SnowballChicken);
+			setParents(rubyChicken, RedChicken, SnowballChicken);
+		}
+		if(this.getFirstOreDictionary("gemRuby") != null && this.getFirstOreDictionary("gemSapphire") != null)
+			setParents(garnetChicken, sapphireChicken, rubyChicken);
+		else
+			setParents(garnetChicken, IronChicken, RedChicken);
+		setParents(tanzaniteChicken, QuartzChicken, PurpleChicken);
+		setParents(topazChicken, QuartzChicken, OrangeChicken);
 	}
 
 

@@ -44,6 +44,15 @@ entity.brasschicken.name=Brass Chicken
 entity.cupronickelchicken.name=Cupronickel Chicken
 entity.electrumchicken.name=Electrum Chicken
 entity.siliconchicken.name=Silicon Chicken
+entity.amberchicken.name=Amber Chicken
+entity.amethystchicken.name=Amethyst Chicken
+entity.malachitechicken.name=Malachite Chicken
+entity.peridotchicken.name=Peridot Chicken
+entity.rubychicken.name=Ruby Chicken
+entity.sapphirechicken.name=Sapphire Chicken
+entity.tanzanitechicken.name=Tanzanite Chicken
+entity.topazchicken.name=Topaz Chicken
+entity.garnetchicken.name=Garnet Chicken
 
 entity.uraniumChicken.name=Uranium Chicken
 entity.aluminumChicken.name=Aluminium Chicken
