@@ -15,10 +15,6 @@ entity.magmaSlime.name=熔岩史莱姆鸡
 entity.purpleSlime.name=紫色史莱姆鸡
 entity.bloodSlime.name=凝血鸡
 
-entity.pShardChicken.name=海晶碎片鸡
-entity.xpChicken.name=经验鸡
-entity.pCrystalChicken.name=海晶砂粒鸡
-
 entity.terrasteelchicken.name=泰拉钢鸡
 entity.manasteelchicken.name=魔力钢鸡
 entity.elementiumchicken.name=源质钢鸡

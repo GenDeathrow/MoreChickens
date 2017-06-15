@@ -15,10 +15,6 @@ entity.magmaSlime.name=Magmaschleimhuhn
 entity.purpleSlime.name=Violettschleimhuhn
 entity.bloodSlime.name=Bluthuhn
 
-entity.pShardChicken.name=Prismarinscherbenhuhn
-entity.xpChicken.name=Erfahrungshuhn
-entity.pCrystalChicken.name=Prismarinkristallhuhn
-
 entity.funwaychick.name=Funwayhuhn
 entity.chickenosto.name=Huhnosto
 
