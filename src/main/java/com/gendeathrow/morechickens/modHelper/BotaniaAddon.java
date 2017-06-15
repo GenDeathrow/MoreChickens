@@ -24,7 +24,7 @@ public class BotaniaAddon extends BaseModAddon
 		terrasteelChicken = addChicken(allChickens, 
 				"terrasteelchicken", 
 				this.nextID(), 
-				"TerrasteelChicken.png", 
+				"terrasteel_chicken.png", 
 				this.getFirstOreDictionary("ingotTerrasteel"), 
 				0x3ff123, 0xf5fcf1, 
 				SpawnType.NONE);
@@ -32,7 +32,7 @@ public class BotaniaAddon extends BaseModAddon
 		manasteelChicken = addChicken(allChickens, 
 				"manasteelchicken", 
 				this.nextID(), 
-				"ManasteelChicken.png", 
+				"manasteel_chicken.png", 
 				this.getFirstOreDictionary("ingotManasteel"), 
 				0x69d7ff, 0x002c4b, 
 				SpawnType.NONE);
@@ -40,7 +40,7 @@ public class BotaniaAddon extends BaseModAddon
 		elementiumChicken = addChicken(allChickens, 
 				"elementiumchicken", 
 				this.nextID(), 
-				"ElementiumChicken.png", 
+				"elementium_chicken.png", 
 				this.getFirstOreDictionary("nuggetElvenElementium"), 
 				0xf655f3, 0xb407b7, 
 				SpawnType.NONE);

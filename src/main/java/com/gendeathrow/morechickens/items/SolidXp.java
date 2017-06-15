@@ -10,8 +10,10 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.SoundCategory;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 
 public class SolidXp extends Item
@@ -33,16 +35,17 @@ public class SolidXp extends Item
     @Override
     public Entity createEntity(World world, Entity location, ItemStack itemstack)
     {
-        return new EntityXPOrb(world, location.posX, location.posY, location.posZ, 25*itemstack.stackSize);
+        return new EntityXPOrb(world, location.posX, location.posY, location.posZ, 25*itemstack.getCount());
     }
     
     @Override
-    public ActionResult<ItemStack> onItemRightClick(ItemStack itemStackIn, World worldIn, EntityPlayer playerIn, EnumHand hand)
+    public EnumActionResult onItemUse(EntityPlayer playerIn, World worldIn, BlockPos pos, EnumHand hand, EnumFacing facing, float hitX, float hitY, float hitZ)
     {
+    	ItemStack itemStackIn = playerIn.getHeldItem(hand);
     	
         if (!playerIn.capabilities.isCreativeMode)
         {
-            --itemStackIn.stackSize;
+            itemStackIn.shrink(1);
         }
 
         worldIn.playSound((EntityPlayer)null, playerIn.posX, playerIn.posY, playerIn.posZ, SoundEvents.ENTITY_EXPERIENCE_BOTTLE_THROW, SoundCategory.NEUTRAL, 0.5F, 0.4F / (itemRand.nextFloat() * 0.4F + 0.8F));
@@ -50,10 +53,11 @@ public class SolidXp extends Item
         if (!worldIn.isRemote)
         {
     		EntityXPOrb entityexp = new EntityXPOrb(worldIn, playerIn.posX, playerIn.posY+1, playerIn.posZ, 25);
-            worldIn.spawnEntityInWorld(entityexp);
+            worldIn.spawnEntity(entityexp);
     	}
+        
         playerIn.addStat(StatList.getObjectUseStats(this));
-    	return new ActionResult<ItemStack>(EnumActionResult.SUCCESS, itemStackIn);
+    	return EnumActionResult.SUCCESS;
     }
 
 }

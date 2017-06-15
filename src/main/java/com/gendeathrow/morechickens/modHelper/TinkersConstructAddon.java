@@ -30,15 +30,15 @@ public class TinkersConstructAddon extends BaseModAddon
 		arditeChicken = addChicken(allChickens, 
 				"arditeChicken", 
 				this.nextID(), 
-				"ArditeChicken.png", 
+				"ardite_chicken.png", 
 				this.getFirstOreDictionary("ingotArdite"), 
 				0xdc3e00, 0xffb20b, 
 				SpawnType.NONE);
 		
 		colbaltChicken = addChicken(allChickens, 
-				"colbaltChicken", 
+				"cobaltChicken", 
 				this.nextID(), 
-				"ColbaltChicken.png", 
+				"cobalt_chicken.png", 
 				this.getFirstOreDictionary("ingotCobalt"), 
 				0x0c5abe, 0x03d94f1, 
 				SpawnType.NONE);
@@ -46,7 +46,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		manyullynChicken = addChicken(allChickens, 
 				"manyullynChicken", 
 				this.nextID(), 
-				"ManyullynChicken.png", 
+				"manyullyn_chicken.png", 
 				this.getFirstOreDictionary("ingotManyullyn"), 
 				0x652e87, 0xbc8fe7, 
 				SpawnType.NONE);
@@ -54,7 +54,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		pigIronChicken = addChicken(allChickens, 
 				"pigIronChicken", 
 				this.nextID(), 
-				"PigIronChicken.png", 
+				"pigiron_chicken.png", 
 				this.getFirstOreDictionary("ingotPigiron"), 
 				0xe6b8b8, 0xdba9a9, 
 				SpawnType.NONE);
@@ -62,7 +62,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		knightSlimeChicken = addChicken(allChickens, 
 				"knightSlimeChicken", 
 				this.nextID(), 
-				"KnightSlimeChicken.png", 
+				"knight_slime_chicken.png", 
 				this.getFirstOreDictionary("ingotKnightslime"), 
 				0xc17ced, 0xad70d8, 
 				SpawnType.NONE);
@@ -70,7 +70,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		bloodSlimeChicken = addChicken(allChickens, 
 				"bloodSlime", 
 				this.nextID(), 
-				"BloodSlime.png", 
+				"blood_slime.png", 
 				this.getFirstOreDictionary("slimeballBlood"), 
 				0xc50616, 0xee0316, 
 				SpawnType.NONE);
@@ -78,7 +78,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		purpleSlimeChicken = addChicken(allChickens, 
 				"purpleSlime", 
 				this.nextID(), 
-				"PurpleSlime.png", 
+				"purple_slime.png", 
 				this.getFirstOreDictionary("slimeballPurple"), 
 				0xc9aad9, 0x7511bf, 
 				SpawnType.NONE);
@@ -86,7 +86,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		magmaSlimeChicken = addChicken(allChickens, 
 				"magmaSlime", 
 				this.nextID(), 
-				"MagmaSlime.png", 
+				"magma_slime.png", 
 				this.getFirstOreDictionary("slimeballMagma"), 
 				0xecb55f, 0xaf7314, 
 				SpawnType.NONE);
@@ -94,7 +94,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		blueSlimeChicken = addChicken(allChickens, 
 				"blueSlime", 
 				this.nextID(), 
-				"BlueSlime.png", 
+				"blue_slime.png", 
 				this.getFirstOreDictionary("slimeballBlue"), 
 				0x67b4c4, 0x30717f, 
 				SpawnType.NONE);

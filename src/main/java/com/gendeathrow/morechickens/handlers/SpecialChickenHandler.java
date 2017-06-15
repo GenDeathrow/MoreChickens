@@ -30,7 +30,7 @@ public class SpecialChickenHandler
             return;
         }
 
-        World worldObj = event.getEntityPlayer().worldObj;
+        World worldObj = event.getEntityPlayer().world;
         if (worldObj.isRemote) {
             return;
         }
@@ -55,10 +55,10 @@ public class SpecialChickenHandler
         EntityChickensChicken smartChicken = convertChicken(chicken, worldObj, chickenDescription);
 
         worldObj.removeEntity(chicken);
-        worldObj.spawnEntityInWorld(smartChicken);
+        worldObj.spawnEntity(smartChicken);
         smartChicken.spawnExplosionParticle();
         
-        item.stackSize--;
+        item.shrink(1);
         
         event.setCanceled(true);
 	}
@@ -68,7 +68,7 @@ public class SpecialChickenHandler
         EntityChickensChicken ChickensChicken = new EntityChickensChicken(worldObj);
         ChickensChicken.setPositionAndRotation(chicken.posX, chicken.posY, chicken.posZ, chicken.rotationYaw, chicken.rotationPitch);
         ChickensChicken.onInitialSpawn(worldObj.getDifficultyForLocation(chicken.getPosition()), null);
-        ChickensChicken.setChickenType(chickenDescription.getId());
+        ChickensChicken.setChickenType(chickenDescription.getRegistryName().toString());
         if (chicken.hasCustomName()) {
         	ChickensChicken.setCustomNameTag(chicken.getCustomNameTag());
         }
@@ -126,7 +126,7 @@ public class SpecialChickenHandler
     	NBTTagCompound tag = new NBTTagCompound();
     	chicken.readFromNBT(tag);
     	
-    	return ChickensRegistry.getByType(tag.getInteger("Type"));
+    	return ChickensRegistry.getByRegistryName(tag.getString("Type"));
     }
     
     

@@ -24,7 +24,7 @@ public class SpecialChickens
 		
         //Darkostos Chicken        
         chickenosto = new ChickensRegistryItem(
-                2025, "chickenosto", new ResourceLocation(ChickensMore.MODID, "textures/entity/chickenosto.png"),
+        		new ResourceLocation(ChickensMore.MODID, "chickenosto"), "chickenosto", new ResourceLocation(ChickensMore.MODID, "textures/entity/chickenosto.png"),
                 new ItemStack(Items.CAKE, 1 , 0),
                 0x000000, 0xffffff){
         	@Override
@@ -45,7 +45,7 @@ public class SpecialChickens
         
         //Funwayguy Chicken
         funwaychick = new ChickensRegistryItem(
-                2026, "funwaychick", new ResourceLocation(ChickensMore.MODID, "textures/entity/funwaychick.png"),
+        		new ResourceLocation(ChickensMore.MODID, "funwaychick"), "funwaychick", new ResourceLocation(ChickensMore.MODID, "textures/entity/funwaychick.png"),
                 new ItemStack(Items.FIREWORKS, 1 , 0),
                 0x4e6961, 0x215a1b){
         	
@@ -68,7 +68,7 @@ public class SpecialChickens
 
         //Boop_beep Chicken
         boopbeepchick = new ChickensRegistryItem(
-                2027, "boopbeepchick", new ResourceLocation(ChickensMore.MODID, "textures/entity/boop_beepchick.png"),
+        		new ResourceLocation(ChickensMore.MODID, "boopbeepchick"), "boopbeepchick", new ResourceLocation(ChickensMore.MODID, "textures/entity/boop_beepchick.png"),
                 new ItemStack(Blocks.GRASS, 1),
                 0x455A2B, 0x546E34){
         	
@@ -90,7 +90,7 @@ public class SpecialChickens
         
         //MrAmericanMike Chicken
         mramericanchick = new ChickensRegistryItem(
-                2028, "mramericanchick", new ResourceLocation(ChickensMore.MODID, "textures/entity/mr_american_chick.png"),
+        		new ResourceLocation(ChickensMore.MODID, "mramericanchick"), "mramericanchick", new ResourceLocation(ChickensMore.MODID, "textures/entity/mr_american_chick.png"),
                 new ItemStack(Items.BANNER, 1),
                 0x215a1b, 0x546E34){
         	

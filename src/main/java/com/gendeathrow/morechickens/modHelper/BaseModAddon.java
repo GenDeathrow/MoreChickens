@@ -125,7 +125,7 @@ public abstract class BaseModAddon
 		
 		LogUtil.debug("Registering ("+ this.modID +") Chicken: '"+chickenName+"':"+ chickenID +":"+ layItem.getDisplayName());
 		
-		ChickensRegistryItem chicken = new ChickensRegistryItem( chickenID, chickenName, new ResourceLocation(ChickensMore.MODID, this.texturesLocation + texture), layItem.copy(), bgColor, fgColor).setSpawnType(spawntype);
+		ChickensRegistryItem chicken = new ChickensRegistryItem( new ResourceLocation(ChickensMore.MODID, chickenName), chickenName, new ResourceLocation(ChickensMore.MODID, this.texturesLocation + texture), layItem.copy(), bgColor, fgColor).setSpawnType(spawntype);
 		
 		chickenList.add(chicken);
 		

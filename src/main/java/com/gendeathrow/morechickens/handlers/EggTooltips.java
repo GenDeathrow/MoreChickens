@@ -18,11 +18,11 @@ public class EggTooltips
 	@SubscribeEvent
 	public void renderToolTip(ItemTooltipEvent event)
 	{
-		if(!event.getEntity().worldObj.isRemote) return;
+		if(!event.getEntity().world.isRemote) return;
 		
 		if(event.getItemStack().getItem() instanceof ItemSpawnEgg)
 		{
-			ChickensRegistryItem chicken = ChickensRegistry.getByType(event.getItemStack().getMetadata());
+			ChickensRegistryItem chicken = ChickensRegistry.getByRegistryName(ItemSpawnEgg.getTypeFromStack(event.getItemStack()));
 			
 			ItemStack layitem = chicken.createLayItem();
 			

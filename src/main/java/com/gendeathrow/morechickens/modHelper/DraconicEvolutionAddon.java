@@ -24,7 +24,7 @@ public class DraconicEvolutionAddon extends BaseModAddon{
 		draconiumChicken = addChicken(allChickens, 
 				"draconiumChicken", 
 				this.nextID(), 
-				"DraconiumChicken.png", 
+				"draconium_chicken.png", 
 				this.getFirstOreDictionary("ingotDraconium"), 
 				0x301549, 0x1a0c27, 
 				SpawnType.NONE);
@@ -32,7 +32,7 @@ public class DraconicEvolutionAddon extends BaseModAddon{
 		draconiumAwakenedChicken = addChicken(allChickens, 
 				"draconiumAwakenedChicken", 
 				this.nextID(), 
-				"DraconiumAwakenedChicken.png", 
+				"draconium_awakened_chicken.png", 
 				this.getFirstOreDictionary("nuggetDraconiumAwakened"), 
 				0xcc440c, 0x9c691a, 
 				SpawnType.NONE);
