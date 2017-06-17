@@ -1,5 +1,6 @@
 package com.gendeathrow.morechickens.modHelper;
 
+import java.util.Collection;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -12,6 +13,7 @@ import net.minecraftforge.oredict.OreDictionary;
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.gendeathrow.morechickens.util.ChickenInformation;
 import com.gendeathrow.morechickens.util.LogUtil;
+import com.setycz.chickens.ChickensRegistry;
 import com.setycz.chickens.ChickensRegistryItem;
 import com.setycz.chickens.SpawnType;
 
@@ -119,7 +121,7 @@ public abstract class BaseModAddon
 	{
 		if(layItem == null)
 		{
-			LogUtil.error("Error Registering ("+ this.modID +") Chicken: '"+chickenName+"' It's LayItem was null");
+			LogUtil.debug("Error Registering ("+ this.modID +") Chicken: '"+chickenName+"' It's LayItem was null");
 			return null;
 		}
 		
@@ -158,12 +160,12 @@ public abstract class BaseModAddon
 		}
 		
 		if(parent1 instanceof String)
-			parentChicken1 = ChickensMore.findChickenChickensMod((String) parent1);
+			parentChicken1 = findChickenChickensMod((String) parent1);
 		else if (parent1 instanceof ChickensRegistryItem)
 			parentChicken1 = (ChickensRegistryItem) parent1;
 		
 		if(parent2 instanceof String)
-			parentChicken2 = ChickensMore.findChickenChickensMod((String) parent2);
+			parentChicken2 = findChickenChickensMod((String) parent2);
 		else if (parent2 instanceof ChickensRegistryItem)
 			parentChicken2 = (ChickensRegistryItem) parent2;
 		
@@ -181,7 +183,35 @@ public abstract class BaseModAddon
 		
 	}
 	
+    // Looks for a chicken inside MoreChickens
+    public static ChickensRegistryItem findChicken(Collection<ChickensRegistryItem> chickens, String name) 
+    {
 
+    		for (ChickensRegistryItem chicken : chickens) 
+			{
+			    if (chicken.getEntityName().compareToIgnoreCase(name) == 0) 
+			    {
+			        return chicken;
+			    }
+			}
+			
+			return findChickenChickensMod(name);
+    }
+
+    // Looks for a chicken inside Chickens mod
+    public static ChickensRegistryItem findChickenChickensMod(String name) 
+    {
+    	for (ChickensRegistryItem chicken : ChickensRegistry.getItems()) 
+    	{
+    		if (chicken.getEntityName().compareToIgnoreCase(name) == 0) 
+    		{
+    			
+    			return chicken;
+    		}
+    	}
+    
+        return null;
+    }
 	
 	/**
 	 * Will grab first ore OreDictionary itemstack <br>

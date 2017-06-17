@@ -3,7 +3,7 @@ itemGroup.chickens=Chickens
 item.morechickens.solidxp.name=Dichte Erfahrung
 
 entity.arditeChicken.name=Ardithuhn
-entity.colbaltChicken.name=Kobalthuhn
+entity.cobaltChicken.name=Kobalthuhn
 entity.manyullynChicken.name=Manyullynhuhn
 entity.pigIronChicken.name=Schweineeisenhuhn
 entity.knightSlimeChicken.name=Knightslimehuhn

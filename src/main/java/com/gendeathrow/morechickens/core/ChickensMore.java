@@ -270,35 +270,7 @@ public class ChickensMore
 	        return configuration.getString(propertyName, Category, parent != null ? parent.getEntityName() : "", "First parent, empty if it's base chicken.");
 	    }
 	    
-	    // Looks for a chicken inside MoreChickens
-	    public static ChickensRegistryItem findChicken(Collection<ChickensRegistryItem> chickens, String name) 
-	    {
 
-	    		for (ChickensRegistryItem chicken : chickens) 
-				{
-				    if (chicken.getEntityName().compareToIgnoreCase(name) == 0) 
-				    {
-				        return chicken;
-				    }
-				}
-				
-				return findChickenChickensMod(name);
-	    }
-
-	    // Looks for a chicken inside Chickens mod
-	    public static ChickensRegistryItem findChickenChickensMod(String name) 
-	    {
-	    	for (ChickensRegistryItem chicken : ChickensRegistry.getItems()) 
-	    	{
-	    		if (chicken.getEntityName().compareToIgnoreCase(name) == 0) 
-	    		{
-	    			
-	    			return chicken;
-	    		}
-	    	}
-        
-	        return null;
-	    }
 	    
 	}
 
