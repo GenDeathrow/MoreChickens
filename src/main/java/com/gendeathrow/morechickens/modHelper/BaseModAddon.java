@@ -117,7 +117,7 @@ public abstract class BaseModAddon
 	
 	protected ChickensRegistryItem addChicken(List<ChickensRegistryItem> chickenList, String chickenName, int chickenID, String texture, ItemStack layItem, int bgColor, int fgColor, SpawnType spawntype)
 	{
-		if(layItem == null)
+		if(layItem == null || layItem.getItem() == null)
 		{
 			LogUtil.error("Error Registering ("+ this.modID +") Chicken: '"+chickenName+"' It's LayItem was null");
 			return null;
