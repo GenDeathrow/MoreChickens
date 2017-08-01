@@ -1,5 +1,10 @@
 package com.gendeathrow.morechickens.handlers;
 
+import com.gendeathrow.morechickens.modHelper.SpecialChickens;
+import com.setycz.chickens.entity.EntityChickensChicken;
+import com.setycz.chickens.registry.ChickensRegistry;
+import com.setycz.chickens.registry.ChickensRegistryItem;
+
 import net.minecraft.entity.passive.EntityChicken;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
@@ -9,11 +14,6 @@ import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
-import com.gendeathrow.morechickens.modHelper.SpecialChickens;
-import com.setycz.chickens.ChickensRegistry;
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.chicken.EntityChickensChicken;
 
 public class SpecialChickenHandler 
 {

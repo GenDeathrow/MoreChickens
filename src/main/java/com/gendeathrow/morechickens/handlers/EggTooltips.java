@@ -7,10 +7,10 @@ import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import com.gendeathrow.morechickens.util.ChickenInformation;
-import com.setycz.chickens.ChickensRegistry;
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
-import com.setycz.chickens.spawnEgg.ItemSpawnEgg;
+import com.setycz.chickens.handler.SpawnType;
+import com.setycz.chickens.item.ItemSpawnEgg;
+import com.setycz.chickens.registry.ChickensRegistry;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class EggTooltips 
 {
@@ -23,6 +23,8 @@ public class EggTooltips
 		if(event.getItemStack().getItem() instanceof ItemSpawnEgg)
 		{
 			ChickensRegistryItem chicken = ChickensRegistry.getByRegistryName(ItemSpawnEgg.getTypeFromStack(event.getItemStack()));
+			
+			if(chicken == null) return;
 			
 			ItemStack layitem = chicken.createLayItem();
 			

@@ -16,7 +16,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import com.gendeathrow.morechickens.core.ModItems;
 import com.gendeathrow.morechickens.handlers.EggTooltips;
 import com.setycz.chickens.ChickensMod;
-import com.setycz.chickens.ChickensRegistryItem;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class ClientProxy extends CommonProxy
 {

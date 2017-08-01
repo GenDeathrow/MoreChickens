@@ -2,14 +2,12 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import net.minecraft.init.Blocks;
-import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
 
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.gendeathrow.morechickens.core.ModItems;
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
+import com.setycz.chickens.handler.SpawnType;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class MoreChickens extends BaseModAddon
 {

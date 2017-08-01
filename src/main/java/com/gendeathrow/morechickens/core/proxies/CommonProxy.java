@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 
 import com.gendeathrow.morechickens.handlers.SpecialChickenHandler;
-import com.setycz.chickens.ChickensRegistryItem;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class CommonProxy
 {

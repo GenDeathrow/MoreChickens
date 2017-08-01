@@ -42,9 +42,8 @@ import com.gendeathrow.morechickens.modHelper.SpecialChickens;
 import com.gendeathrow.morechickens.modHelper.ThermalFoundationAddon;
 import com.gendeathrow.morechickens.modHelper.TinkersConstructAddon;
 import com.gendeathrow.morechickens.util.LogUtil;
-import com.setycz.chickens.ChickensRegistry;
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
+import com.setycz.chickens.registry.ChickensRegistry;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 @Mod(modid = ChickensMore.MODID, name=ChickensMore.NAME, version = ChickensMore.VERSION, dependencies=ChickensMore.dependencies)
 public class ChickensMore 

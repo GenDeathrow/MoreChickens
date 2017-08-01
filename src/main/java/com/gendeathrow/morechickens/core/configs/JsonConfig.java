@@ -5,17 +5,21 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.JsonUtils;
+import javax.annotation.Nullable;
 
 import com.gendeathrow.morechickens.util.LogUtil;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonObject;
 
-public class JsonConfig{
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
+/**
+ * 
+ * @author GenDeathrow
+ */
+public class JsonConfig{
 	
 	boolean hasChanged = false;
 	
@@ -56,7 +60,7 @@ public class JsonConfig{
 	{
 		JsonObject object = new JsonObject();
 
-		if(json.has(categoryProperty) && json.get(categoryProperty).isJsonObject()){
+		if(json.has(categoryProperty)){
     		object = json.getAsJsonObject(categoryProperty);
     	}
     	else{
@@ -80,7 +84,7 @@ public class JsonConfig{
 	{
 		JsonObject object = getCategory(categoryProperty);
 
-		if(object.has(property)&& JsonUtils.isBoolean(json, categoryProperty)){
+		if(object.has(property)){
 			value = object.get(property).getAsBoolean();
 		}else{
 			object.addProperty(property, value);
@@ -103,7 +107,7 @@ public class JsonConfig{
 		
 		JsonObject object = getCategory(categoryProperty);
 		
-		if(object.has(property) && JsonUtils.isString(object)){
+		if(object.has(property)){
 			value = object.get(property).getAsString();
 		}else{
 			object.addProperty(property, value);
@@ -127,7 +131,7 @@ public class JsonConfig{
 	public float getFloat(String categoryProperty, String property, float value, float min, float max) {
 
 		JsonObject object = getCategory(categoryProperty);
-		if(object.has(property) && JsonUtils.isNumber(object)){
+		if(object.has(property)){
 			value = object.get(property).getAsFloat();
 		}else{
 			object.addProperty(property, value);
@@ -148,11 +152,12 @@ public class JsonConfig{
 	 * @param stack
 	 * @return
 	 */
+	@Nullable
 	public ItemStack getItemStack(String categoryProperty, String property, ItemStack stack)
 	{
 		JsonObject object = getCategory(categoryProperty);
 		
-		if(object.has(property) && JsonUtils.isString(object)){
+		if(object.has(property)){
 			stack = getItemStackFromID( object.get(property).getAsString());
 		}else{
 			object.addProperty(property, getIDfromItemStack(stack));
@@ -227,7 +232,7 @@ public class JsonConfig{
      * @param stack
      * @return
      */
-	private static String getIDfromItemStack(ItemStack stack){
+	protected static String getIDfromItemStack(ItemStack stack){
 		return stack.getItem().getRegistryName() + (stack.getMetadata() != 0 || stack.getCount() > 1 ? ":"+ stack.getMetadata() + (stack.getCount() > 1 ? ":"+stack.getCount() : ""): "");
 	}
 	
@@ -237,7 +242,8 @@ public class JsonConfig{
 	 * @param itemID
 	 * @return
 	 */
-	private static ItemStack getItemStackFromID(String itemID){
+	@Nullable
+	protected static ItemStack getItemStackFromID(String itemID){
 
 		String[] args = itemID.split(":");
 
@@ -245,30 +251,29 @@ public class JsonConfig{
 		Item item = null;
 		int meta = 0;
 		int qty = 1;
-		
-		if(args.length == 3){
-			try{
-				meta = Integer.parseInt(args[2]);
-				item = Item.getByNameOrId(args[0] +":"+ args[1]);		
-			}catch(Exception e){
-				item = Item.getByNameOrId(args[0] +":"+ args[1]);
-			}
-		}
-		else if(args.length == 4){
-			try{
-				meta = Integer.parseInt(args[2]);
-				qty = Integer.parseInt(args[3]);
-				item = Item.getByNameOrId(args[0] +":"+ args[1]);		
-			}catch(Exception e){
-				item = Item.getByNameOrId(args[0] +":"+ args[1]);
-			}
-		}
-		else{
+
+		if(args.length >= 2){
 			item = Item.getByNameOrId(args[0] +":"+ args[1]);
+		}		
+		
+		if(args.length >= 3){
+			try{
+				meta = Integer.parseInt(args[2]);
+			}catch(Exception e){
+				LogUtil.getLogger().error("Could not parse meta value: "+ itemID);
+			}
+		}
+		
+		if(args.length == 4){
+			try{
+				qty = Integer.parseInt(args[3]);
+			}catch(Exception e){
+				LogUtil.getLogger().error("Could not parse qty value: "+ itemID);
+			}
 		}
 		
 		if(item != null){
-			stack = new ItemStack(Item.getByNameOrId(args[0] +":"+ args[1]), 1, meta);
+			stack = new ItemStack(item, qty, meta);
 		}
 		else{
 			LogUtil.getLogger().error("Item could not be Found: "+ itemID);

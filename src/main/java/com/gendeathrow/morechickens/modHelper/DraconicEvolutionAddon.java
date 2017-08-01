@@ -4,8 +4,8 @@ import java.util.List;
 
 import net.minecraftforge.fml.common.Loader;
 
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
+import com.setycz.chickens.handler.SpawnType;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class DraconicEvolutionAddon extends BaseModAddon{
 

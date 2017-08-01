@@ -2,8 +2,8 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import com.setycz.chickens.ChickensRegistryItem;
-import com.setycz.chickens.SpawnType;
+import com.setycz.chickens.handler.SpawnType;
+import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class ThermalFoundationAddon extends BaseModAddon{
 
