@@ -90,7 +90,14 @@ entity.signalumChicken.name=Signalum Chicken
 entity.richSlagChicken.name=Rich Slag Chicken
 entity.slagChicken.name=Slag Chicken
 
+entity.redstonecrystalchicken.name=Redstone Crystal Chicken
+entity.stoneburntchicken.name=Stoneburnt Chicken
+entity.lunarreactivedustchicken.name=Lunar Reactive Dust Chicken
+entity.moonstonechicken.name=Moonstone Chicken
+entity.magicalwoodchicken.name=Magical Wood Chicken
+entity.demonmetalchicken.name=Demon Metal Chicken
 entity.quartzenrichedironchicken.name=Quartz Enriched Iron Chicken
+
 entity.cablechicken.name=Cable Chicken
 entity.basicprocessorchicken.name=Basic Processor Chicken
 entity.improvedprocessorchicken.name=Improved Processor Chicken
