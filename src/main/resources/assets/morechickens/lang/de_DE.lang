@@ -18,9 +18,13 @@ entity.bloodSlime.name=Bluthuhn
 entity.pShardChicken.name=Prismarinscherbenhuhn
 entity.xpChicken.name=Erfahrungshuhn
 entity.pCrystalChicken.name=Prismarinkristallhuhn
+entity.obsidianChicken.name=Obsidianhuhn
+entity.soulSandChicken.name=Seelensandhuhn
 
 entity.funwaychick.name=Funwayhuhn
 entity.chickenosto.name=Huhnosto
+entity.mramericanchick.name=MrAmericanHühnchen
+entity.boopbeepchick.name=Boop Beep Hühnchen
 
 entity.terrasteelchicken.name=Terrastahlhuhn
 entity.manasteelchicken.name=Manastahlhuhn
@@ -53,6 +57,7 @@ entity.garnetchicken.name=Granathuhn
 entity.uraniumChicken.name=Uranhuhn
 entity.aluminumChicken.name=Aluminiumhuhn
 entity.constantanChicken.name=Konstantanhuhn
+entity.bulletChicken.name=Kugelhuhn
 
 entity.osmiumChicken.name=Osmiumhuhn
 
@@ -84,6 +89,8 @@ entity.mithrilChicken.name=Mana-infundiertes Huhn
 entity.signalumChicken.name=Signalumhuhn
 entity.richSlagChicken.name=Reichhaltiges Schlackehuhn
 entity.slagChicken.name=Schlackehuhn
+
+
 
 text.morechickens.notbreedable=Kann nicht gezüchtet werden
 text.morechickens.breedable=Züchten
