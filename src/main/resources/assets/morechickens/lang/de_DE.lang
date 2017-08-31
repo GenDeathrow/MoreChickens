@@ -90,7 +90,13 @@ entity.signalumChicken.name=Signalumhuhn
 entity.richSlagChicken.name=Reichhaltiges Schlackehuhn
 entity.slagChicken.name=Schlackehuhn
 
-
+entity.quartzenrichedironchicken.name=Quartz angereichertes Eisenhuhn
+entity.cablechicken.name=Datenkabelhuhn
+entity.basicprocessorchicken.name=einfaches Prozessorkernhuhn
+entity.improvedprocessorchicken.name=verbessertes Prozessorkernhuhn
+entity.advancedprocessorchicken.name=fortschrittliches Prozessorkernhuhn
+entity.constructioncorechicken.name=Konstruktionskernhuhn
+entity.destructioncorechicken.name=Destruktionskernhuhn
 
 text.morechickens.notbreedable=Kann nicht gezüchtet werden
 text.morechickens.breedable=Züchten
