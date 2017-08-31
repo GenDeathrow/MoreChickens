@@ -40,6 +40,7 @@ import com.gendeathrow.morechickens.modHelper.MoreChickens;
 import com.gendeathrow.morechickens.modHelper.SpecialChickens;
 import com.gendeathrow.morechickens.modHelper.ThermalFoundationAddon;
 import com.gendeathrow.morechickens.modHelper.TinkersConstructAddon;
+import com.gendeathrow.morechickens.modHelper.ActuallyAdditionsAddon;
 import com.gendeathrow.morechickens.modHelper.ExtraUtilitiesAddon;
 import com.gendeathrow.morechickens.modHelper.RefinedStorageAddon;
 import com.gendeathrow.morechickens.util.LogUtil;
@@ -67,6 +68,7 @@ public class ChickensMore
 	    		+ "after:bigreactors;"
 	    		+ "after:EnderIO;"
 	    		+ "after:thermalfoundation;"
+	    		+ "after:actuallyadditions;"
 	    		+ "after:extrautils2;"
 	    		+ "after:refinedstorage";
 	    
@@ -219,9 +221,9 @@ public class ChickensMore
 			addModAddon(new MekanismAddon());
 			addModAddon(new ThermalFoundationAddon());
 			addModAddon(new TinkersConstructAddon());
+			addModAddon(new ActuallyAdditionsAddon());
 			addModAddon(new ExtraUtilitiesAddon());
 			addModAddon(new RefinedStorageAddon());
-
 			
 		}
 		

@@ -90,6 +90,15 @@ entity.signalumChicken.name=Signalum Chicken
 entity.richSlagChicken.name=Rich Slag Chicken
 entity.slagChicken.name=Slag Chicken
 
+
+entity.blackquartzchicken.name=Black Quartz Chicken
+entity.voidcrystalchicken.name=Void Crystal Chicken
+entity.restoniacrystalchicken.name=Restonia Crystal Chicken
+entity.enoricrystalchicken.name=Enori Crystal Chicken
+entity.emeradiccrystalchicken.name=Emeradic Crystal Chicken
+entity.diamantinecrystalchicken.name=Diamantine Crystal Chicken
+entity.paliscrystalchicken.name=Palis Crystal Chicken
+
 entity.redstonecrystalchicken.name=Redstone Crystal Chicken
 entity.stoneburntchicken.name=Stoneburnt Chicken
 entity.lunarreactivedustchicken.name=Lunar Reactive Dust Chicken
