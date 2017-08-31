@@ -53,6 +53,8 @@ entity.sapphirechicken.name=Sapphire Chicken
 entity.tanzanitechicken.name=Tanzanite Chicken
 entity.topazchicken.name=Topaz Chicken
 entity.garnetchicken.name=Garnet Chicken
+entity.saltchicken.name=Salt Chicken
+entity.rubberchicken.name=Rubber Chicken
 
 entity.uraniumChicken.name=Uranium Chicken
 entity.aluminumChicken.name=Aluminium Chicken
@@ -90,6 +92,9 @@ entity.signalumChicken.name=Signalum Chicken
 entity.richSlagChicken.name=Rich Slag Chicken
 entity.slagChicken.name=Slag Chicken
 
+entity.pinkslimechicken.name=Pink Slimeball Chicken
+entity.darkgemchicken.name=Dark Gem Chicken
+entity.vinteumchicken.name=Vinteum Chicken
 
 entity.blackquartzchicken.name=Black Quartz Chicken
 entity.voidcrystalchicken.name=Void Crystal Chicken

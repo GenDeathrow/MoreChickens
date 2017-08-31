@@ -40,6 +40,9 @@ import com.gendeathrow.morechickens.modHelper.MoreChickens;
 import com.gendeathrow.morechickens.modHelper.SpecialChickens;
 import com.gendeathrow.morechickens.modHelper.ThermalFoundationAddon;
 import com.gendeathrow.morechickens.modHelper.TinkersConstructAddon;
+import com.gendeathrow.morechickens.modHelper.EvilCraftAddon;
+import com.gendeathrow.morechickens.modHelper.MineFactoryReloadedAddon;
+import com.gendeathrow.morechickens.modHelper.ArsMagica2Addon;
 import com.gendeathrow.morechickens.modHelper.ActuallyAdditionsAddon;
 import com.gendeathrow.morechickens.modHelper.ExtraUtilitiesAddon;
 import com.gendeathrow.morechickens.modHelper.RefinedStorageAddon;
@@ -68,6 +71,9 @@ public class ChickensMore
 	    		+ "after:bigreactors;"
 	    		+ "after:EnderIO;"
 	    		+ "after:thermalfoundation;"
+	    		+ "after:arsmagica2;"
+	    		+ "after:evilcraft;"
+	    		+ "after:minefactoryreloaded;"
 	    		+ "after:actuallyadditions;"
 	    		+ "after:extrautils2;"
 	    		+ "after:refinedstorage";
@@ -221,6 +227,9 @@ public class ChickensMore
 			addModAddon(new MekanismAddon());
 			addModAddon(new ThermalFoundationAddon());
 			addModAddon(new TinkersConstructAddon());
+			addModAddon(new ArsMagica2Addon());
+			addModAddon(new EvilCraftAddon());
+			addModAddon(new MineFactoryReloadedAddon());
 			addModAddon(new ActuallyAdditionsAddon());
 			addModAddon(new ExtraUtilitiesAddon());
 			addModAddon(new RefinedStorageAddon());

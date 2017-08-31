@@ -233,6 +233,7 @@ public abstract class BaseModAddon
 	public static String DiamondChicken = "DiamondChicken";
 	public static String PurpleChicken = "PurpleChicken";
 	public static String OrangeChicken = "OrangeChicken";
+	public static String PinkChicken = "PinkChicken";
 	
 
 	
