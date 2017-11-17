@@ -4,12 +4,12 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import net.minecraft.item.ItemStack;
-
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.registry.ChickensRegistry;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraft.item.ItemStack;
 
 public class ConfigHandler {
 	public static final File configDir = new File("config/chickens");

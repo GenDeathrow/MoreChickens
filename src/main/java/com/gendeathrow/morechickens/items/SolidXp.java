@@ -8,7 +8,6 @@ import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.stats.StatList;
-import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumActionResult;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumHand;
@@ -22,8 +21,6 @@ public class SolidXp extends Item
 	public SolidXp()
 	{
 		super();
-		this.setRegistryName("solidxp");
-		this.setUnlocalizedName("morechickens.solidxp");
 		this.setCreativeTab(CreativeTabs.MISC);
 	}
 	

@@ -2,10 +2,10 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import net.minecraftforge.fml.common.Loader;
-
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraftforge.fml.common.Loader;
 
 public class DraconicEvolutionAddon extends BaseModAddon{
 

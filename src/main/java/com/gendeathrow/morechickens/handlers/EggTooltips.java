@@ -1,16 +1,16 @@
 package com.gendeathrow.morechickens.handlers;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.text.TextComponentTranslation;
-import net.minecraft.util.text.TextFormatting;
-import net.minecraftforge.event.entity.player.ItemTooltipEvent;
-import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
-
 import com.gendeathrow.morechickens.util.ChickenInformation;
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.item.ItemSpawnEgg;
 import com.setycz.chickens.registry.ChickensRegistry;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.text.TextComponentTranslation;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 public class EggTooltips 
 {
@@ -18,7 +18,8 @@ public class EggTooltips
 	@SubscribeEvent
 	public void renderToolTip(ItemTooltipEvent event)
 	{
-		if(!event.getEntity().world.isRemote) return;
+
+		if(event.getEntity() == null || event.getEntity().world == null || !event.getEntity().world.isRemote) return;
 		
 		if(event.getItemStack().getItem() instanceof ItemSpawnEgg)
 		{

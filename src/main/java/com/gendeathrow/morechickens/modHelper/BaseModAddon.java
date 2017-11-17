@@ -5,17 +5,17 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
-import net.minecraft.item.ItemStack;
-import net.minecraft.util.ResourceLocation;
-import net.minecraftforge.fml.common.Loader;
-import net.minecraftforge.oredict.OreDictionary;
-
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.gendeathrow.morechickens.util.ChickenInformation;
 import com.gendeathrow.morechickens.util.LogUtil;
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.registry.ChickensRegistry;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.fml.common.Loader;
+import net.minecraftforge.oredict.OreDictionary;
 
 public abstract class BaseModAddon 
 {
@@ -119,11 +119,12 @@ public abstract class BaseModAddon
 	
 	protected ChickensRegistryItem addChicken(List<ChickensRegistryItem> chickenList, String chickenName, int chickenID, String texture, ItemStack layItem, int bgColor, int fgColor, SpawnType spawntype)
 	{
-		if(layItem == null)
+		if(layItem == null || layItem.getItem() == null || layItem.isEmpty())
 		{
-			LogUtil.debug("Error Registering ("+ this.modID +") Chicken: '"+chickenName+"' It's LayItem was null");
+			LogUtil.error("Error Registering ("+ this.modID +") Chicken: '"+chickenName+"' It's LayItem was null");
 			return null;
 		}
+		
 		
 		LogUtil.debug("Registering ("+ this.modID +") Chicken: '"+chickenName+"':"+ chickenID +":"+ layItem.getDisplayName());
 		
@@ -182,8 +183,8 @@ public abstract class BaseModAddon
 		child.setParentsNew(parentChicken1, parentChicken2);
 		
 	}
-	
-    // Looks for a chicken inside MoreChickens
+
+	// Looks for a chicken inside MoreChickens
     public static ChickensRegistryItem findChicken(Collection<ChickensRegistryItem> chickens, String name) 
     {
 
@@ -263,6 +264,7 @@ public abstract class BaseModAddon
 	public static String DiamondChicken = "DiamondChicken";
 	public static String PurpleChicken = "PurpleChicken";
 	public static String OrangeChicken = "OrangeChicken";
+	public static String PinkChicken = "PinkChicken";
 	
 
 	

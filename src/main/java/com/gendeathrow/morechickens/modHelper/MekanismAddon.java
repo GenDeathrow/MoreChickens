@@ -2,11 +2,11 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemStack;
-
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 
 public class MekanismAddon extends BaseModAddon{
 

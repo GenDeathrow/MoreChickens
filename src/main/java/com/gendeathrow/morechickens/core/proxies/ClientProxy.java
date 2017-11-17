@@ -1,6 +1,11 @@
 package com.gendeathrow.morechickens.core.proxies;
 
 
+import com.gendeathrow.morechickens.core.ModItems;
+import com.gendeathrow.morechickens.handlers.EggTooltips;
+import com.setycz.chickens.ChickensMod;
+import com.setycz.chickens.registry.ChickensRegistryItem;
+
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelBakery;
@@ -12,11 +17,6 @@ import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
-
-import com.gendeathrow.morechickens.core.ModItems;
-import com.gendeathrow.morechickens.handlers.EggTooltips;
-import com.setycz.chickens.ChickensMod;
-import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class ClientProxy extends CommonProxy
 {

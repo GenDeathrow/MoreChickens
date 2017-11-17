@@ -4,9 +4,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import net.minecraft.util.text.TextFormatting;
-
 import com.gendeathrow.morechickens.core.ChickensMore;
+
+import net.minecraft.util.text.TextFormatting;
 
 public class ChickenInformation 
 {

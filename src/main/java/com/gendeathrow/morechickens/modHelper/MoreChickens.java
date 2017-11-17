@@ -2,12 +2,12 @@ package com.gendeathrow.morechickens.modHelper;
 
 import java.util.List;
 
-import net.minecraft.item.ItemStack;
-
 import com.gendeathrow.morechickens.core.ChickensMore;
 import com.gendeathrow.morechickens.core.ModItems;
 import com.setycz.chickens.handler.SpawnType;
 import com.setycz.chickens.registry.ChickensRegistryItem;
+
+import net.minecraft.item.ItemStack;
 
 public class MoreChickens extends BaseModAddon
 {
@@ -38,43 +38,6 @@ public class MoreChickens extends BaseModAddon
 				0x3dff1e, 0x3ff123, 
 				SpawnType.NONE); 
         		
-
-//        //Prismarine shard        
-//        pShardChicken  = addChicken(allChickens, 
-//				"pShardChicken", 
-//				this.nextID(), 
-//				"pshard_chicken.png", 
-//				new ItemStack(Items.PRISMARINE_SHARD, 1 , 0), 
-//				0x43806e, 0x9fcbbc, 
-//				SpawnType.NONE);
-//        
-//        //Prismarine crystal        
-//        pCrystalChicken = addChicken(allChickens, 
-//				"pCrystalChicken", 
-//				this.nextID(), 
-//				"pcrystal_chicken.png", 
-//				new ItemStack(Items.PRISMARINE_CRYSTALS, 1 , 0), 
-//				0x4e6961, 0xdfe9dc, 
-//				SpawnType.NONE); 
-        
-//        
-//        obsidianChicken = addChicken(allChickens, 
-//				"obsidianChicken", 
-//				this.nextID(), 
-//				"obsidian_chicken.png", 
-//				new ItemStack(Blocks.OBSIDIAN, 1 , 0), 
-//				0x08080e, 0x463a60, 
-//				SpawnType.NONE); 
-//        
-//        
-//        soulSandChicken = addChicken(allChickens, 
-//				"soulSandChicken", 
-//				this.nextID(), 
-//				"soulsand_chicken.png", 
-//				new ItemStack(Blocks.SOUL_SAND, 1 , 0), 
-//				0x453125, 0xd52f08, 
-//				SpawnType.HELL); 
-        
 		return allChickens;
 	}
 
@@ -82,9 +45,6 @@ public class MoreChickens extends BaseModAddon
 	public void RegisterAllParents(List<ChickensRegistryItem> allChickens) 
 	{
 		setParents(xpChicken, EmeraldChicken, GreenChicken);
-		//setParents(pShardChicken, WaterChicken, BlueChicken);
-		//setParents(pCrystalChicken, WaterChicken, EmeraldChicken);
-		//setParents(obsidianChicken, WaterChicken, LavaChicken);
 	}
 
 }
