@@ -64,7 +64,7 @@ public class BotaniaAddon extends BaseModAddon
 	public void RegisterAllParents(List<ChickensRegistryItem> allChickens) 
 	{
 		setParents(manasteelChicken, IronChicken, GhastChicken);
-		setParents(terrasteelChicken, EnderChicken, MoreChickens.pCrystalChicken);
+		setParents(terrasteelChicken, EnderChicken, PCrystalChicken);
 		setParents(elementiumChicken, manasteelChicken, terrasteelChicken);
 	}
 

@@ -106,8 +106,8 @@ public class EnderIOAddon extends BaseModAddon
 		setParents(redstoneAlloyChicken, RedstoneChicken, BaseMetalsAddon.siliconChicken);
 		setParents(conductiveIronChicken, RedstoneChicken, IronChicken);
 		setParents(pulsatingIronChicken, IronChicken, EnderChicken);
-		setParents(darkSteelChicken, IronChicken, MoreChickens.obsidianChicken);
-		setParents(soulariumChicken, MoreChickens.soulSandChicken, GoldChicken);
+		setParents(darkSteelChicken, IronChicken, ObsidianChicken);
+		setParents(soulariumChicken, SoulSandChicken, GoldChicken);
 	}
 
 }

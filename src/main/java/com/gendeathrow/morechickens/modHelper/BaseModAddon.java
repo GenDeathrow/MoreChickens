@@ -266,6 +266,11 @@ public abstract class BaseModAddon
 	public static String OrangeChicken = "OrangeChicken";
 	public static String PinkChicken = "PinkChicken";
 	
+	public static String PCrystalChicken = "pCrystalChicken";
+	public static String SoulSandChicken = "soulSandChicken";
+	public static String ObsidianChicken = "obsidianChicken";
+	public static String PShardChicken = "pShardChicken";
+	
 
 	
 }

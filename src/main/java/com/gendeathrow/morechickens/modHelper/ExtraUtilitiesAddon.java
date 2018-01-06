@@ -93,7 +93,7 @@ public class ExtraUtilitiesAddon extends BaseModAddon
 	{
 		if(Loader.isModLoaded("EnderIO"))
 		{
-			setParents(redstoneCrystalChicken, EnderIOAddon.redstoneAlloyChicken, MoreChickens.pCrystalChicken);
+			setParents(redstoneCrystalChicken, EnderIOAddon.redstoneAlloyChicken, PCrystalChicken);
 			setParents(stoneburntChicken, redstoneCrystalChicken, EnderIOAddon.darkSteelChicken);
 			setParents(lunarReactiveDustChicken, redstoneCrystalChicken, BlueChicken);
 			setParents(moonstoneChicken, lunarReactiveDustChicken, EnderIOAddon.vibrantAlloyChicken);
@@ -102,7 +102,7 @@ public class ExtraUtilitiesAddon extends BaseModAddon
 		}
 		else
 		{
-			setParents(redstoneCrystalChicken, RedstoneChicken, MoreChickens.pCrystalChicken);
+			setParents(redstoneCrystalChicken, RedstoneChicken, PCrystalChicken);
 			setParents(stoneburntChicken, redstoneCrystalChicken, GoldChicken);
 			setParents(lunarReactiveDustChicken, redstoneCrystalChicken, BlueChicken);
 			setParents(moonstoneChicken, lunarReactiveDustChicken, BlazeChicken);

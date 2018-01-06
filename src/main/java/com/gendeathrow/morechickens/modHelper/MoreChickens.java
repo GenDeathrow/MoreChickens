@@ -13,10 +13,7 @@ public class MoreChickens extends BaseModAddon
 {
 
 	public static ChickensRegistryItem xpChicken;
-	public static ChickensRegistryItem pShardChicken;
-	public static ChickensRegistryItem pCrystalChicken;
-	public static ChickensRegistryItem obsidianChicken;
-	public static ChickensRegistryItem soulSandChicken;
+
 	
 	
 	public MoreChickens() 
