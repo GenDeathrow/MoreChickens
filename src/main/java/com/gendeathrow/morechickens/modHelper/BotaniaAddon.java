@@ -24,6 +24,8 @@ public class BotaniaAddon extends BaseModAddon
 	{
 		super("botania", "Botania","textures/entity/botania/");
 		this.setStartID(120);
+		this.setNeedsModPresent(true);
+		
 	}
 
 	@Override

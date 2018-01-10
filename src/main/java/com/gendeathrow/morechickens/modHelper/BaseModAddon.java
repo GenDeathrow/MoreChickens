@@ -19,6 +19,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public abstract class BaseModAddon 
 {
+	
 	protected String modID;
 	protected String modName;
 	protected String texturesLocation;
@@ -270,6 +271,8 @@ public abstract class BaseModAddon
 	public static String SoulSandChicken = "soulSandChicken";
 	public static String ObsidianChicken = "obsidianChicken";
 	public static String PShardChicken = "pShardChicken";
+	
+	public static String GlassChicken = "GlassChicken";
 	
 
 	

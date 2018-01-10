@@ -46,6 +46,7 @@ public class BaseMetalsAddon extends BaseModAddon
 	public static ChickensRegistryItem garnetChicken = null;
 	public static ChickensRegistryItem saltChicken = null;
 	public static ChickensRegistryItem rubberChicken = null;
+	
 
 	@Override
 	public List<ChickensRegistryItem> registerChickens(List<ChickensRegistryItem> allChickens) 

@@ -16,6 +16,7 @@ public class DraconicEvolutionAddon extends BaseModAddon{
 	{
 		super("draconicevolution", "Draconic Evolution", "textures/entity/draconic/");
 		this.setStartID(90);
+		this.setNeedsModPresent(true);
 	}
 
 	@Override

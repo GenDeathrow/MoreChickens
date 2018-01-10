@@ -28,6 +28,7 @@ import com.gendeathrow.morechickens.modHelper.MineFactoryReloadedAddon;
 import com.gendeathrow.morechickens.modHelper.MoreChickens;
 import com.gendeathrow.morechickens.modHelper.RefinedStorageAddon;
 import com.gendeathrow.morechickens.modHelper.SpecialChickens;
+import com.gendeathrow.morechickens.modHelper.TechRebornAddon;
 import com.gendeathrow.morechickens.modHelper.ThermalFoundationAddon;
 import com.gendeathrow.morechickens.modHelper.TinkersConstructAddon;
 import com.gendeathrow.morechickens.util.LogUtil;
@@ -201,7 +202,7 @@ public class ChickensMore
 			addModAddon(new ActuallyAdditionsAddon());
 			addModAddon(new ExtraUtilitiesAddon());
 			addModAddon(new RefinedStorageAddon());
-			
+			addModAddon(new TechRebornAddon());
 		}
 		
 		public void addModAddon(BaseModAddon addon)

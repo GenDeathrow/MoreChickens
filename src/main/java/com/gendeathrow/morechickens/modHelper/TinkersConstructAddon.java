@@ -108,7 +108,7 @@ public class TinkersConstructAddon extends BaseModAddon
 		setParents(arditeChicken, BlazeChicken, MagmaChicken);
 		setParents(colbaltChicken, NetherWartChicken, GhastChicken);
 		setParents(manyullynChicken, arditeChicken, colbaltChicken);
-		setParents(pigIronChicken, arditeChicken, IronChicken);
+		setParents(pigIronChicken, bloodSlimeChicken, IronChicken);
 		setParents(knightSlimeChicken, manyullynChicken, pigIronChicken);
 		setParents(bloodSlimeChicken, SlimeChicken, RedChicken);
 		setParents(purpleSlimeChicken, bloodSlimeChicken, BlueChicken);
