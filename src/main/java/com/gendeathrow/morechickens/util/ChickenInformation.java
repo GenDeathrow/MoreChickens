@@ -11,7 +11,7 @@ import net.minecraft.util.text.TextFormatting;
 public class ChickenInformation 
 {
 
-	public static HashMap<Integer, ChickenInformation> TOOLTIPCHICKENS = new HashMap<Integer, ChickenInformation>();
+	public static HashMap<String, ChickenInformation> TOOLTIPCHICKENS = new HashMap<String, ChickenInformation>();
 	
 	/*
 	 * From Mod
@@ -66,7 +66,7 @@ public class ChickenInformation
 	
 	
 	
-	public static void AddChickenInformation(int ChickenID, ChickenInformation info)
+	public static void AddChickenInformation(String ChickenID, ChickenInformation info)
 	{
 		ChickenInformation.TOOLTIPCHICKENS.put(ChickenID, info);
 	}

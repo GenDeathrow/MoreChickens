@@ -133,7 +133,7 @@ public abstract class BaseModAddon
 		
 		chickenList.add(chicken);
 		
-		ChickenInformation.AddChickenInformation(chickenID, new ChickenInformation(ChickensMore.NAME, "", this.getModName()));
+		ChickenInformation.AddChickenInformation(new ResourceLocation(ChickensMore.MODID, chickenName).toString(), new ChickenInformation(ChickensMore.NAME, "", this.getModName()));
 		
 		return chicken;
 	}

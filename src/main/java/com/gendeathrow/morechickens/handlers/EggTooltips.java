@@ -57,9 +57,11 @@ public class EggTooltips
 									parent2);
 			}
 			
-			if(ChickenInformation.TOOLTIPCHICKENS.containsKey(event.getItemStack().getMetadata()))
+			;
+
+			if(ChickenInformation.TOOLTIPCHICKENS.containsKey(ItemSpawnEgg.getTypeFromStack(event.getItemStack())))
 			{
-				ChickenInformation info = ChickenInformation.TOOLTIPCHICKENS.get(event.getItemStack().getMetadata());
+				ChickenInformation info = ChickenInformation.TOOLTIPCHICKENS.get(ItemSpawnEgg.getTypeFromStack(event.getItemStack()));
 				event.getToolTip().addAll(info.getToolTip());
 			}
 		}

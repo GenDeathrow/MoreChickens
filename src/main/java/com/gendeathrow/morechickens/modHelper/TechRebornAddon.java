@@ -43,7 +43,7 @@ public class TechRebornAddon extends BaseModAddon{
 				this.nextID(), 
 				"yellowgarnet_chicken.png", 
 				this.getFirstOreDictionary("gemYellowGarnet"), 
-				0x989585, 0xd1ccb6, 
+				0xa5a537, 0x414116, 
 				SpawnType.NONE);
 
 		//Ores
@@ -52,7 +52,7 @@ public class TechRebornAddon extends BaseModAddon{
 				this.nextID(), 
 				"chrome_chicken.png", 
 				this.getFirstOreDictionary("ingotChrome"), 
-				0x989585, 0xd1ccb6, 
+				0xa0a1a3, 0x454545, 
 				SpawnType.NONE);
 		
 ////		if(ThermalFoundationAddon.iridiumChicken == null)
@@ -69,7 +69,7 @@ public class TechRebornAddon extends BaseModAddon{
 				this.nextID(), 
 				"titanium_chicken.png", 
 				this.getFirstOreDictionary("ingotTitanium"), 
-				0x989585, 0xd1ccb6, 
+				0xe2e2e2, 0x5f5959, 
 				SpawnType.NONE);
 		
 		tungstenChicken = addChicken(allChickens, 
@@ -77,15 +77,15 @@ public class TechRebornAddon extends BaseModAddon{
 				this.nextID(), 
 				"tungsten_chicken.png", 
 				this.getFirstOreDictionary("ingotTungsten"), 
-				0x989585, 0xd1ccb6, 
+				0xc3bd89, 0xdee6a6, 
 				SpawnType.NONE);
 		
 		tungstensteelChicken = addChicken(allChickens, 
 				"tungstensteelchicken", 
 				this.nextID(), 
 				"tungstensteel_chicken.png", 
-				this.getFirstOreDictionary("tungstensteelChicken"), 
-				0x989585, 0xd1ccb6, 
+				this.getFirstOreDictionary("ingotTungstensteel"), 
+				0x343536, 0x696d71, 
 				SpawnType.NONE);
 		
 		refinedIronChicken = addChicken(allChickens, 
@@ -93,7 +93,7 @@ public class TechRebornAddon extends BaseModAddon{
 				this.nextID(), 
 				"refinediron_chicken.png", 
 				this.getFirstOreDictionary("ingotRefinedIron"), 
-				0x989585, 0xd1ccb6, 
+				0xb6c4d3, 0xb6c4d3, 
 				SpawnType.NONE);
 		
 		
