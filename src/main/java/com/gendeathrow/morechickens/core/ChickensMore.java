@@ -22,6 +22,7 @@ import com.gendeathrow.morechickens.modHelper.EnderIOAddon;
 import com.gendeathrow.morechickens.modHelper.EvilCraftAddon;
 import com.gendeathrow.morechickens.modHelper.ExtraUtilitiesAddon;
 import com.gendeathrow.morechickens.modHelper.ExtremeReactorsAddon;
+import com.gendeathrow.morechickens.modHelper.FluidChickensAddon;
 import com.gendeathrow.morechickens.modHelper.ImmersiveEngineeringAddon;
 import com.gendeathrow.morechickens.modHelper.MekanismAddon;
 import com.gendeathrow.morechickens.modHelper.MineFactoryReloadedAddon;
@@ -79,7 +80,8 @@ public class ChickensMore
 	    		+ "after:minefactoryreloaded;"
 	    		+ "after:actuallyadditions;"
 	    		+ "after:extrautils2;"
-	    		+ "after:refinedstorage";
+	    		+ "after:refinedstorage;"
+	    		+ "after:techreborn";
 	    
 	    @Instance(MODID)
 		public static ChickensMore instance;
@@ -188,6 +190,7 @@ public class ChickensMore
 		{
 			addModAddon(new MoreChickens());
 			addModAddon(new BaseMetalsAddon());
+			//addModAddon(new FluidChickensAddon());
 			addModAddon(new BotaniaAddon());
 			addModAddon(new DraconicEvolutionAddon());
 			addModAddon(new EnderIOAddon());

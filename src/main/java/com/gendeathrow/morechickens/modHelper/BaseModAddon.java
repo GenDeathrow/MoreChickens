@@ -19,7 +19,7 @@ import net.minecraftforge.oredict.OreDictionary;
 
 public abstract class BaseModAddon 
 {
-	
+
 	protected String modID;
 	protected String modName;
 	protected String texturesLocation;

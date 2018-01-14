@@ -7,6 +7,7 @@ import com.setycz.chickens.registry.ChickensRegistryItem;
 
 public class ThermalFoundationAddon extends BaseModAddon{
 
+	public static ThermalFoundationAddon INSTANCE;
 	
 	public static ChickensRegistryItem basalzRodChicken = null;
 	public static ChickensRegistryItem blitzRodChicken = null;
@@ -25,6 +26,7 @@ public class ThermalFoundationAddon extends BaseModAddon{
 	{
 		super("thermalfoundation", "Thermal Foundation", "textures/entity/thermal_foundation/");
 		setStartID(2060);
+		INSTANCE = this;
 	}
 
 	/**
