@@ -21,7 +21,7 @@ public class EnderIOAddon extends BaseModAddon
 	
 	public EnderIOAddon() 
 	{
-		super("EnderIO", "EnderIO", "textures/entity/enderio/");
+		super("enderio", "EnderIO", "textures/entity/enderio/");
 		this.setStartID(2030);
 	}
 	/**

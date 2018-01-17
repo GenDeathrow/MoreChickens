@@ -66,14 +66,14 @@ public class ChickensMore
 	    
 	    //TODO required-after:chickens@[6.0.0,);
 	    public static final String dependencies =  "required-after:chickens@[6.0.0,);"
-	    		+ "after:Botania;"
+	    		+ "after:botania;"
 	    		+ "after:basemetals;"
 	    		+ "after:tconstruct;"
 	    		+ "after:draconicevolution;"
 	    		+ "after:immersiveengineering;"
 	    		+ "after:mekanism;"
 	    		+ "after:bigreactors;"
-	    		+ "after:EnderIO;"
+	    		+ "after:enderio;"
 	    		+ "after:thermalfoundation;"
 	    		+ "after:arsmagica2;"
 	    		+ "after:evilcraft;"
