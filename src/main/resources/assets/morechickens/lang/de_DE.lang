@@ -15,8 +15,16 @@ entity.magmaSlime.name=Magmaschleimhuhn
 entity.purpleSlime.name=Violettschleimhuhn
 entity.bloodSlime.name=Bluthuhn
 
+entity.pShardChicken.name=Prismarinscherbenhuhn
+entity.xpChicken.name=Erfahrungshuhn
+entity.pCrystalChicken.name=Prismarinkristallhuhn
+entity.obsidianChicken.name=Obsidianhuhn
+entity.soulSandChicken.name=Seelensandhuhn
+
 entity.funwaychick.name=Funwayhuhn
 entity.chickenosto.name=Huhnosto
+entity.mramericanchick.name=MrAmericanHuhn
+entity.boopbeepchick.name=Boop Beep Huhn
 
 entity.terrasteelchicken.name=Terrastahlhuhn
 entity.manasteelchicken.name=Manastahlhuhn
@@ -45,10 +53,13 @@ entity.sapphirechicken.name=Saphirhuhn
 entity.tanzanitechicken.name=Tansanithuhn
 entity.topazchicken.name=Topashuhn
 entity.garnetchicken.name=Granathuhn
+entity.saltchicken.name=Salzhuhn
+entity.rubberchicken.name=Gummihuhn
 
 entity.uraniumChicken.name=Uranhuhn
 entity.aluminumChicken.name=Aluminiumhuhn
 entity.constantanChicken.name=Konstantanhuhn
+entity.bulletChicken.name=Projektilhuhn
 
 entity.osmiumChicken.name=Osmiumhuhn
 
@@ -80,6 +91,42 @@ entity.mithrilChicken.name=Mana-infundiertes Huhn
 entity.signalumChicken.name=Signalumhuhn
 entity.richSlagChicken.name=Reichhaltiges Schlackehuhn
 entity.slagChicken.name=Schlackehuhn
+
+entity.pinkslimechicken.name=Pinkschleimhuhn
+entity.darkgemchicken.name=Dunkler Edelstein-Huhn
+entity.vinteumchicken.name=Vinteumhuhn
+
+entity.tungstenchicken.name=Wolframhuhn
+entity.tungstensteelchicken.name=Wolframstahlhuhn
+entity.yellowgarnetchicken.name=Gelber Granat-Huhn
+entity.chromechicken.name=Chromhuhn
+entity.refinedironchicken.name=Verfeinertes Eisen-Huhn
+entity.titaniumchicken.name=Titaniumhuhn
+
+entity.blackquartzchicken.name=Schwarzer Quarz-Huhn
+entity.voidcrystalchicken.name=Leerekristallhuhn
+entity.restoniacrystalchicken.name=Restoniakristallhuhn
+entity.enoricrystalchicken.name=Enorikristallhuhn
+entity.emeradiccrystalchicken.name=Emeradickristallhuhn
+entity.diamantinecrystalchicken.name=Diamantinkristallhuhn
+entity.paliscrystalchicken.name=Paliskristallhuhn
+
+entity.redstonecrystalchicken.name=Redstonekristallhuhn
+entity.stoneburntchicken.name=Steingebranntes Huhn
+entity.lunarreactivedustchicken.name=Mondreaktiver Staub-Huhn
+entity.moonstonechicken.name=Mondsteinhuhn
+entity.magicalwoodchicken.name=Magisches Holz-Huhn
+entity.demonmetalchicken.name=Dämonenmetallhuhn
+entity.quartzenrichedironchicken.name=Quarzangereichertes Eisen-Huhn
+
+entity.cablechicken.name=Kabelhuhn
+entity.basicprocessorchicken.name=Einfacher Prozessor-Huhn
+entity.improvedprocessorchicken.name=Verbesserter Prozessor-Huhn
+entity.advancedprocessorchicken.name=Erweiterter Prozessor-Huhn
+entity.constructioncorechicken.name=Konstruktionskern-Huhn
+entity.destructioncorechicken.name=Destruktionskern-Huhn
+
+entity.
 
 text.morechickens.notbreedable=Kann nicht gezüchtet werden
 text.morechickens.breedable=Züchten
